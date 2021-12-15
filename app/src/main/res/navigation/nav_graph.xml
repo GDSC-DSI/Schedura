@@ -12,12 +12,20 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_timeTableFragment"
-            app:destination="@id/timeTableFragment"
-            app:popUpTo="@id/homeFragment" />
+            app:destination="@id/timeTableFragment" />
     </fragment>
     <fragment
         android:id="@+id/timeTableFragment"
         android:name="net.code.gdsc_app.ui.TimeTableFragment"
         android:label="fragment_time_table"
-        tools:layout="@layout/fragment_time_table" />
+        tools:layout="@layout/fragment_time_table" >
+        <action
+            android:id="@+id/action_timeTableFragment_to_timeTableActivity2"
+            app:destination="@id/timeTableActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/timeTableActivity"
+        android:name="net.code.gdsc_app.ui.TimeTableActivity"
+        android:label="activity_time_table"
+        tools:layout="@layout/activity_time_table" />
 </navigation>

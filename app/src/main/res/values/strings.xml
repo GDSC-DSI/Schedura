@@ -1,5 +1,32 @@
 <resources>
     <string name="app_name">Gdsc-App</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="Branch">
+        <item>Branch</item>
+        <item>Electronics &amp; Communication Engineering</item>
+        <item>Computer Science Engineering</item>
+        <item>Information Science Engineering</item>
+        <item>Electrical &amp; Electronics Engineering</item>
+        <item>Mechanical Engineering</item>
+        <item>Civil Engineering</item>
+        <item>Chemical Engineering</item>
+    </string-array>
+
+    <string-array name="Semester">
+        <item>Semester</item>
+        <item>III</item>
+        <item>V</item>
+        <item>VII</item>
+    </string-array>
+
+    <string-array name="Section">
+        <item>Section</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+    </string-array>
+
+    <string name="lottie">student.json</string>
+
 </resources>

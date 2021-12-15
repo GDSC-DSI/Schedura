@@ -19,7 +19,7 @@
         android:text="Home Screen"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/tt_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
