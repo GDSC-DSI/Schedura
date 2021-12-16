@@ -6,21 +6,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import net.code.gdsc_app.R
+import net.code.gdsc_app.databinding.FragmentFridayBinding
 import net.code.gdsc_app.databinding.FragmentMondayBinding
+import net.code.gdsc_app.databinding.FragmentThursdayBinding
 
 
-class Monday : Fragment() {
-private lateinit var binding:FragmentMondayBinding
+class Friday : Fragment() {
+    private lateinit var binding:FragmentFridayBinding
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_monday, container, false)
+        return inflater.inflate(R.layout.fragment_friday, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding= FragmentMondayBinding.bind(view)
+        binding= FragmentFridayBinding.bind(view)
 
-        binding.tvMonday.text = "Fragment One"
+        binding.tvFriday.text = "Fragment Five"
     }
 
 

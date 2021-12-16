@@ -13,10 +13,12 @@ class Tuesday : Fragment() {
     private lateinit var binding: FragmentTuesdayBinding
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_monday, container, false)
+        return inflater.inflate(R.layout.fragment_tuesday, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding= FragmentTuesdayBinding.bind(view)
         binding.tvTuesday.text = "Fragment Two"
     }
 

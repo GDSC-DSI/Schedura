@@ -7,20 +7,21 @@ import android.view.View
 import android.view.ViewGroup
 import net.code.gdsc_app.R
 import net.code.gdsc_app.databinding.FragmentMondayBinding
+import net.code.gdsc_app.databinding.FragmentThursdayBinding
 
 
-class Monday : Fragment() {
-private lateinit var binding:FragmentMondayBinding
+class Thursday : Fragment() {
+    private lateinit var binding:FragmentThursdayBinding
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_monday, container, false)
+        return inflater.inflate(R.layout.fragment_thursday, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding= FragmentMondayBinding.bind(view)
+        binding= FragmentThursdayBinding.bind(view)
 
-        binding.tvMonday.text = "Fragment One"
+        binding.tvThursday.text = "Fragment Four"
     }
 
 
