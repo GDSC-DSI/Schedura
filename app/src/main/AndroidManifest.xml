@@ -11,7 +11,10 @@
         android:theme="@style/Theme.GdscApp">
         <activity
             android:name=".ui.TimeTableActivity"
-            android:exported="false" />
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+
         <activity
             android:name=".MainActivity"
             android:exported="true"

@@ -20,7 +20,7 @@ private lateinit var binding:FragmentMondayBinding
         super.onViewCreated(view, savedInstanceState)
         binding= FragmentMondayBinding.bind(view)
 
-        binding.tvMonday.text = "Fragment One"
+//        binding.tvMonday.text = "Fragment One"
     }
 
 
