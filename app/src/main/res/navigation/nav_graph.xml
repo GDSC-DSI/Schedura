@@ -11,13 +11,34 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment_to_timeTableFragment"
-            app:destination="@id/timeTableFragment"
-            app:popUpTo="@id/homeFragment" />
+            android:id="@+id/action_homeFragment_to_timeTableActivity"
+            app:destination="@id/timeTableActivity" />
+
     </fragment>
-    <fragment
-        android:id="@+id/timeTableFragment"
-        android:name="net.code.gdsc_app.ui.TimeTableFragment"
-        android:label="fragment_time_table"
-        tools:layout="@layout/fragment_time_table" />
+
+    <activity
+        android:id="@+id/timeTableActivity"
+        android:name="net.code.gdsc_app.ui.TimeTableActivity"
+        android:label="activity_time_table"
+        tools:layout="@layout/activity_time_table">
+
+    </activity>
+
+<!--    <fragment-->
+<!--        android:id="@+id/mondayFragment"-->
+<!--        android:name="net.code.gdsc_app.ui.Monday"-->
+<!--        android:label="fragment_monday"-->
+<!--        tools:layout="@layout/fragment_monday"/>-->
+
+<!--    <fragment-->
+<!--        android:id="@+id/tuesdayFragment"-->
+<!--        android:name="net.code.gdsc_app.ui.Tuesday"-->
+<!--        android:label="fragment_tuesday"-->
+<!--        tools:layout="@layout/fragment_tuesday"/>-->
+
+<!--    <fragment-->
+<!--        android:id="@+id/wednesdayFragment"-->
+<!--        android:name="net.code.gdsc_app.ui.Wednesday"-->
+<!--        android:label="fragment_wednesday"-->
+<!--        tools:layout="@layout/fragment_wednesday"/>-->
 </navigation>
