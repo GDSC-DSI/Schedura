@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/attendanceManagerFragment">
 
     <fragment
         android:id="@+id/homeFragment"
@@ -20,4 +20,24 @@
         android:name="net.code.gdsc_app.ui.TimeTableFragment"
         android:label="fragment_time_table"
         tools:layout="@layout/fragment_time_table" />
+    <fragment
+        android:id="@+id/addSubjectFragment"
+        android:name="net.code.gdsc_app.ui.AddSubjectFragment"
+        android:label="fragment_add_subject"
+        tools:layout="@layout/fragment_add_subject" >
+        <action
+            android:id="@+id/action_addSubjectFragment_to_attendanceManagerFragment"
+            app:destination="@id/attendanceManagerFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/attendanceManagerFragment"
+        android:name="net.code.gdsc_app.ui.AttendanceManagerFragment"
+        android:label="fragment_attendance_manager"
+        tools:layout="@layout/fragment_attendance_manager" >
+        <action
+            android:id="@+id/action_attendanceManagerFragment_to_addSubjectFragment"
+            app:destination="@id/addSubjectFragment"
+            app:popUpTo="@id/attendanceManagerFragment" />
+    </fragment>
 </navigation>
