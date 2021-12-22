@@ -3,13 +3,15 @@ import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import net.code.gdsc_app.models.User
 import net.code.gdsc_app.ui.*
 
 @Suppress("DEPRECATION")
 internal class TimeTableAdapter(
     var context: Context,
     fm: FragmentManager,
-    var totalTabs: Int
+    var totalTabs: Int,
+    var users : List<User>
 ) :
     FragmentPagerAdapter(fm) {
     override fun getItem(position: Int): Fragment {

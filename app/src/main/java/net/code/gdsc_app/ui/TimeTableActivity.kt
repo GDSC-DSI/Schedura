@@ -5,7 +5,9 @@ import android.os.Bundle
 import android.view.View
 import android.view.Window
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import androidx.navigation.navArgs
 import androidx.navigation.ui.setupWithNavController
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.bottomnavigation.BottomNavigationMenu
@@ -13,13 +15,29 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.tabs.TabLayout
 import net.code.gdsc_app.R
 import net.code.gdsc_app.TimeTableAdapter
+import net.code.gdsc_app.networking.Repository
+import net.code.gdsc_app.viewmodels.TimeTableViewModel
+import net.code.gdsc_app.viewmodels.TimeTableViewModelFactory
 
 class TimeTableActivity : AppCompatActivity() {
     lateinit var tabLayout: TabLayout
     lateinit var viewPager: ViewPager
+    lateinit var viewModel: TimeTableViewModel
+    private val repository by lazy {
+        Repository()
+    }
+    private val args : TimeTableActivityArgs by navArgs()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_time_table)
+
+        val sem = args.sem
+        viewModel = ViewModelProvider(this,TimeTableViewModelFactory(repository)).get(TimeTableViewModel::class.java)
+
+        viewModel.getPosts(sem)
+
+
+
         supportActionBar?.hide()
 //        setTheme(R.style.AppTheme)
         tabLayout = findViewById(R.id.tabLayout)

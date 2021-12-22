@@ -22,6 +22,9 @@
         android:label="activity_time_table"
         tools:layout="@layout/activity_time_table">
 
+        <argument
+            android:name="sem"
+            app:argType="integer" />
     </activity>
 
 <!--    <fragment-->
