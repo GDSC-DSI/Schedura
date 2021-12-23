@@ -19,7 +19,6 @@ class Tuesday : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding= FragmentTuesdayBinding.bind(view)
-        binding.tvTuesday.text = "Fragment Two"
     }
 
 }

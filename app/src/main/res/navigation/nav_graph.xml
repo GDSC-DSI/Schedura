@@ -13,8 +13,10 @@
         <action
             android:id="@+id/action_homeFragment_to_timeTableActivity"
             app:destination="@id/timeTableActivity" />
-
     </fragment>
+
+
+
 
     <activity
         android:id="@+id/timeTableActivity"

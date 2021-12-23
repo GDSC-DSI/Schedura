@@ -21,7 +21,6 @@ class Thursday : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding= FragmentThursdayBinding.bind(view)
 
-        binding.tvThursday.text = "Fragment Four"
     }
 
 
