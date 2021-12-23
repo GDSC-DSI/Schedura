@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/12mad/StudioProjects/ASJ/app/src/main/res/drawable-v24/ic_bg.xml" value="0.21574074074074073" />
+        <entry key="..\:/Users/12mad/StudioProjects/ASJ/app/src/main/res/drawable-v24/ic_curve_bg.xml" value="0.21574074074074073" />
+        <entry key="..\:/Users/12mad/StudioProjects/ASJ/app/src/main/res/drawable-v24/ic_dp_circle.xml" value="0.21574074074074073" />
+        <entry key="..\:/Users/12mad/StudioProjects/ASJ/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.21574074074074073" />
+        <entry key="..\:/Users/12mad/StudioProjects/ASJ/app/src/main/res/drawable-v24/ic_time_table_white.xml" value="0.21574074074074073" />
+        <entry key="..\:/Users/12mad/StudioProjects/ASJ/app/src/main/res/drawable/ic_icon.xml" value="0.21574074074074073" />
+        <entry key="..\:/Users/12mad/StudioProjects/ASJ/app/src/main/res/drawable/ic_launcher_background.xml" value="0.21574074074074073" />
+        <entry key="..\:/Users/12mad/StudioProjects/ASJ/app/src/main/res/drawable/txt_border.xml" value="0.21574074074074073" />
         <entry key="..\:/Users/12mad/StudioProjects/ASJ/app/src/main/res/layout/activity_time_table.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/12mad/StudioProjects/ASJ/app/src/main/res/layout/fragment_friday.xml" value="0.1527777777777778" />
         <entry key="..\:/Users/12mad/StudioProjects/ASJ/app/src/main/res/layout/fragment_home.xml" value="0.14166666666666666" />
