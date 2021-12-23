@@ -21,7 +21,7 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         binding.ttButton.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_timeTableFragment)
+            findNavController().navigate(R.id.action_homeFragment_to_timeTableActivity)
         }
         return binding.root
     }

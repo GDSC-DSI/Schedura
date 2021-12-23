@@ -10,8 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GdscApp">
         <activity
+            android:name=".ui.TimeTableActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+
+        <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
