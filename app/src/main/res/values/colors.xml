@@ -9,4 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="transparent">#717171</color>
     <color name="orange">#FF8222</color>
+    <!--SnackBar Colors-->
+    <color name="colorSuccess">#4caf50</color>
+    <color name="colorError">#d32f2f</color>
+    <color name="colorWarning">#ff9800</color>
 </resources>
