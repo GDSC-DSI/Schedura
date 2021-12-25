@@ -23,6 +23,9 @@ class HomeFragment : Fragment() {
         binding.ttButton.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_timeTableActivity)
         }
+        binding.button2.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_attendanceManagerFragment)
+        }
         return binding.root
     }
 }

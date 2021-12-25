@@ -3,16 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/attendanceManagerFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
         android:id="@+id/homeFragment"
         android:name="net.code.gdsc_app.ui.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_timeTableActivity"
             app:destination="@id/timeTableActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_attendanceManagerFragment"
+            app:destination="@id/attendanceManagerFragment"
+            app:popUpTo="@id/homeFragment" />
     </fragment>
     <activity
         android:id="@+id/timeTableActivity"
@@ -22,33 +26,28 @@
 
     </activity>
 
-<!--    <fragment-->
-<!--        android:id="@+id/mondayFragment"-->
-<!--        android:name="net.code.gdsc_app.ui.Monday"-->
-<!--        android:label="fragment_monday"-->
-<!--        tools:layout="@layout/fragment_monday"/>-->
+    <!--    <fragment-->
+    <!--        android:id="@+id/mondayFragment"-->
+    <!--        android:name="net.code.gdsc_app.ui.Monday"-->
+    <!--        android:label="fragment_monday"-->
+    <!--        tools:layout="@layout/fragment_monday"/>-->
 
-<!--    <fragment-->
-<!--        android:id="@+id/tuesdayFragment"-->
-<!--        android:name="net.code.gdsc_app.ui.Tuesday"-->
-<!--        android:label="fragment_tuesday"-->
-<!--        tools:layout="@layout/fragment_tuesday"/>-->
+    <!--    <fragment-->
+    <!--        android:id="@+id/tuesdayFragment"-->
+    <!--        android:name="net.code.gdsc_app.ui.Tuesday"-->
+    <!--        android:label="fragment_tuesday"-->
+    <!--        tools:layout="@layout/fragment_tuesday"/>-->
 
-<!--    <fragment-->
-<!--        android:id="@+id/wednesdayFragment"-->
-<!--        android:name="net.code.gdsc_app.ui.Wednesday"-->
-<!--        android:label="fragment_wednesday"-->
-<!--        tools:layout="@layout/fragment_wednesday"/>-->
-    <fragment
-        android:id="@+id/timeTableFragment"
-        android:name="net.code.gdsc_app.ui.TimeTableFragment"
-        android:label="fragment_time_table"
-        tools:layout="@layout/fragment_time_table" />
+    <!--    <fragment-->
+    <!--        android:id="@+id/wednesdayFragment"-->
+    <!--        android:name="net.code.gdsc_app.ui.Wednesday"-->
+    <!--        android:label="fragment_wednesday"-->
+    <!--        tools:layout="@layout/fragment_wednesday"/>-->
     <fragment
         android:id="@+id/addSubjectFragment"
         android:name="net.code.gdsc_app.ui.AddSubjectFragment"
         android:label="fragment_add_subject"
-        tools:layout="@layout/fragment_add_subject" >
+        tools:layout="@layout/fragment_add_subject">
         <action
             android:id="@+id/action_addSubjectFragment_to_attendanceManagerFragment"
             app:destination="@id/attendanceManagerFragment"
@@ -58,7 +57,7 @@
         android:id="@+id/attendanceManagerFragment"
         android:name="net.code.gdsc_app.ui.AttendanceManagerFragment"
         android:label="fragment_attendance_manager"
-        tools:layout="@layout/fragment_attendance_manager" >
+        tools:layout="@layout/fragment_attendance_manager">
         <action
             android:id="@+id/action_attendanceManagerFragment_to_addSubjectFragment"
             app:destination="@id/addSubjectFragment"
