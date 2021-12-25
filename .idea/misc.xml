@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Development/Android/ASJ/app/src/main/res/layout/activity_time_table.xml" value="0.25" />
+        <entry key="..\:/Development/Android/ASJ/app/src/main/res/layout/fragment_home.xml" value="0.23148148148148148" />
+        <entry key="..\:/Development/Android/ASJ/app/src/main/res/layout/fragment_monday.xml" value="0.25" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/GdscApp/app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/GdscApp/app/src/main/res/layout/fragment_home.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/GdscApp/app/src/main/res/layout/fragment_time_table.xml" value="0.25416666666666665" />

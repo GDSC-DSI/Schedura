@@ -21,10 +21,9 @@
         android:name="net.code.gdsc_app.ui.TimeTableActivity"
         android:label="activity_time_table"
         tools:layout="@layout/activity_time_table">
-
         <argument
-            android:name="sem"
-            app:argType="integer" />
+            android:name="query"
+            app:argType="net.code.gdsc_app.models.Query" />
     </activity>
 
 <!--    <fragment-->
