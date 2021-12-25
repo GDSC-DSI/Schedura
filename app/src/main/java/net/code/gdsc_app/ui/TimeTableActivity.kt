@@ -44,7 +44,7 @@ class TimeTableActivity : AppCompatActivity() {
         tabLayout.tabGravity = TabLayout.GRAVITY_FILL
         val adapter = TimeTableAdapter(this, supportFragmentManager, tabLayout.tabCount, query)
         val window: Window = this.window
-        window.statusBarColor = ContextCompat.getColor(this, R.color.purple_200)
+        window.statusBarColor = ContextCompat.getColor(this, R.color.transparent)
         viewPager.adapter = adapter
         viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
         tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {

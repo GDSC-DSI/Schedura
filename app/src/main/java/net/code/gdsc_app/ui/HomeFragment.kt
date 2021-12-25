@@ -26,6 +26,9 @@ class HomeFragment : Fragment() {
             val query = Query("CSE", 5, "E")
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToTimeTableActivity(query))
         }
+        binding.button2.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_attendanceManagerFragment)
+        }
         return binding.root
     }
 }

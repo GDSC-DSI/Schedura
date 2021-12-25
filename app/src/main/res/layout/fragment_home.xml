@@ -3,85 +3,96 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".ui.HomeFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-
-    <Button
-        android:id="@+id/tt_button"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="88dp"
-        android:text="Proceed"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner3"
-        app:layout_constraintVertical_bias="0.326" />
+        tools:context=".ui.HomeFragment">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="267dp"
-        android:layout_height="328dp"
-        android:src="@drawable/pic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        <!-- TODO: Update blank fragment layout -->
 
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="287dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="12dp"
-        android:entries="@array/Branch"
-        android:spinnerMode="dropdown"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.54"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        />
+        <Button
+            android:id="@+id/tt_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="88dp"
+            android:text="Proceed"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner3"
+            app:layout_constraintVertical_bias="0.2" />
 
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="287dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="24dp"
-        android:entries="@array/Semester"
-        android:spinnerMode="dropdown"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.54"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner1" />
+        <Button
+            android:id="@+id/button_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:text="Attendance"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner3"
+            app:layout_constraintVertical_bias="0.4" />
 
-    <Spinner
-        android:id="@+id/spinner3"
-        android:layout_width="287dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="32dp"
-        android:entries="@array/Section"
-        android:spinnerMode="dropdown"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.54"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="267dp"
+            android:layout_height="328dp"
+            android:src="@drawable/pic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="359dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="72dp"
-        android:src="@drawable/img"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tt_button" />
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="287dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:entries="@array/Branch"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.54"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="287dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="14dp"
+            android:entries="@array/Semester"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.54"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner1" />
+
+        <Spinner
+            android:id="@+id/spinner3"
+            android:layout_width="287dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="14dp"
+            android:entries="@array/Section"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.54"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="359dp"
+            android:layout_height="67dp"
+            android:layout_marginTop="72dp"
+            android:src="@drawable/img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tt_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

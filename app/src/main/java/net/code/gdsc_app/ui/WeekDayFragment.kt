@@ -57,32 +57,32 @@ private val repository : Repository by lazy {
         when (weekDay){
             Constants.Companion.WeekDay.MONDAY -> {
                 viewModel.mondayData.observe(viewLifecycleOwner, {
-                    binding.subjectTitle.text = it.body()!!.id.toString()
+                    binding.subject.text = it.body()!!.id.toString()
                 })
             }
             Constants.Companion.WeekDay.TUESDAY -> {
                 viewModel.tuesdayData.observe(viewLifecycleOwner, {
-                    binding.subjectTitle.text = it.body()!!.id.toString()
+                    binding.subject.text = it.body()!!.id.toString()
                 })
             }
             Constants.Companion.WeekDay.WEDNESDAY -> {
                 viewModel.wednesdayData.observe(viewLifecycleOwner, {
-                    binding.subjectTitle.text = it.body()!!.id.toString()
+                    binding.subject.text = it.body()!!.id.toString()
                 })
             }
             Constants.Companion.WeekDay.THURSDAY -> {
                 viewModel.thursdayData.observe(viewLifecycleOwner, {
-                    binding.subjectTitle.text = it.body()!!.id.toString()
+                    binding.subject.text = it.body()!!.id.toString()
                 })
             }
             Constants.Companion.WeekDay.FRIDAY -> {
                 viewModel.fridayData.observe(viewLifecycleOwner, {
-                    binding.subjectTitle.text = it.body()!!.id.toString()
+                    binding.subject.text = it.body()!!.id.toString()
                 })
             }
             Constants.Companion.WeekDay.SATURDAY -> {
                 viewModel.saturdayData.observe(viewLifecycleOwner, {
-                    binding.subjectTitle.text = it.body()!!.id.toString()
+                    binding.subject.text = it.body()!!.id.toString()
                 })
             }
         }
