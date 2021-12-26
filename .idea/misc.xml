@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Azazel/StudioProjects/ASJ/app/src/main/res/drawable/ic_icon.xml" value="0.1" />
+        <entry key="..\:/Users/Azazel/StudioProjects/ASJ/app/src/main/res/drawable/ic_logo.xml" value="0.1" />
+        <entry key="..\:/Users/Azazel/StudioProjects/ASJ/app/src/main/res/drawable/logo.xml" value="0.1" />
+        <entry key="..\:/Users/Azazel/StudioProjects/ASJ/app/src/main/res/drawable/splash_image.xml" value="0.1" />
         <entry key="..\:/Users/Azazel/StudioProjects/ASJ/app/src/main/res/layout/fragment_splash.xml" value="0.144" />
+        <entry key="..\:/Users/Azazel/StudioProjects/ASJ/app/src/main/res/layout/fragment_splash_screen.xml" value="0.1" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/GdscApp/app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/GdscApp/app/src/main/res/layout/fragment_home.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/GdscApp/app/src/main/res/layout/fragment_time_table.xml" value="0.25416666666666665" />
