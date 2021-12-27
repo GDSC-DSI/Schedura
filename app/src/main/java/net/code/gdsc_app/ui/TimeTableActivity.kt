@@ -14,9 +14,14 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.tabs.TabLayout
 import net.code.gdsc_app.R
 import net.code.gdsc_app.TimeTableAdapter
+import net.code.gdsc_app.databinding.ActivityTimeTableBinding
 import net.code.gdsc_app.models.Query
 import net.code.gdsc_app.networking.Repository
+import net.code.gdsc_app.utils.Constants
 import net.code.gdsc_app.viewmodels.TimeTableViewModel
+import net.code.gdsc_app.viewmodels.TimeTableViewModelFactory
+
+private lateinit var binding: ActivityTimeTableBinding
 
 class TimeTableActivity : AppCompatActivity() {
     lateinit var tabLayout: TabLayout
@@ -25,9 +30,11 @@ class TimeTableActivity : AppCompatActivity() {
         Repository()
     }
     private val args : TimeTableActivityArgs by navArgs()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_time_table)
+        binding = ActivityTimeTableBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val query : Query = args.query
 

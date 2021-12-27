@@ -69,6 +69,7 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0'
     //lifecycle
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.0"
     //recyclerview
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation "androidx.recyclerview:recyclerview-selection:1.2.0-alpha01"

@@ -95,15 +95,19 @@
 <!--        app:layout_constraintGuide_percent="0.1" />-->
 
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.WeekDayFragment"
-    android:background="#FFFFFF">
+    android:id="@+id/swipeRefresh"
+    >
 
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -146,9 +150,9 @@
             android:padding="8dp">
 
             <TextView
+                android:id="@+id/time"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:text="Time"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -172,7 +176,9 @@
 
     </LinearLayout>
 
-</ScrollView>
+    </ScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
 

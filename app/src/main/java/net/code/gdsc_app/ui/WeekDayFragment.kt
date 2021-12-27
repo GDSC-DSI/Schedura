@@ -17,8 +17,8 @@ import net.code.gdsc_app.viewmodels.TimeTableViewModelFactory
 
 class WeekDayFragment : Fragment() {
 
-    companion object{
-        fun newInstance(query: Query, weekDay: Constants.Companion.WeekDay) : WeekDayFragment {
+    companion object {
+        fun newInstance(query: Query, weekDay: Constants.Companion.WeekDay): WeekDayFragment {
             val fragment = WeekDayFragment()
             val args = Bundle()
             args.putParcelable("query", query)
@@ -28,33 +28,39 @@ class WeekDayFragment : Fragment() {
         }
     }
 
-private lateinit var binding:FragmentWeekdayBinding
-private lateinit var viewModel: TimeTableViewModel
-private val repository : Repository by lazy {
-    Repository()
-}
+    private lateinit var binding: FragmentWeekdayBinding
+    private lateinit var viewModel: TimeTableViewModel
+    private val repository: Repository by lazy {
+        Repository()
+    }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(R.layout.fragment_weekday, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding= FragmentWeekdayBinding.bind(view)
+        binding = FragmentWeekdayBinding.bind(view)
 
-        viewModel = ViewModelProvider(this,TimeTableViewModelFactory(repository))[TimeTableViewModel::class.java]
+        viewModel = ViewModelProvider(
+            this,
+            TimeTableViewModelFactory(repository)
+        )[TimeTableViewModel::class.java]
 
         //        binding.tvMonday.text = "Fragment One"
 
         val query = arguments?.getParcelable<Query>("query")
-        val weekDay : Constants.Companion.WeekDay = arguments?.getSerializable("weekDay") as Constants.Companion.WeekDay
+        val weekDay: Constants.Companion.WeekDay =
+            arguments?.getSerializable("weekDay") as Constants.Companion.WeekDay
 
-        if (query != null){
-            viewModel.getTimetable(query,weekDay)
+        if (query != null) {
+            viewModel.getTimetable(query, weekDay)
         }
 
-        when (weekDay){
+        when (weekDay) {
             Constants.Companion.WeekDay.MONDAY -> {
                 viewModel.mondayData.observe(viewLifecycleOwner, {
                     binding.subject.text = it.body()!!.id.toString()
@@ -86,7 +92,13 @@ private val repository : Repository by lazy {
                 })
             }
         }
+
+
+        binding.swipeRefresh.setOnRefreshListener {
+            viewModel.getTimetable(query!!, weekDay)
+            if (viewModel.getTimetable(query!!, weekDay) != null) {
+                binding.swipeRefresh.isRefreshing = false
+            }
+        }
     }
-
-
 }
