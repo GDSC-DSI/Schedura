@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import net.code.gdsc_app.R
 import net.code.gdsc_app.databinding.FragmentHomeBinding
+import net.code.gdsc_app.models.Query
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -20,8 +21,13 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
+
         binding.ttButton.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_timeTableActivity)
+            val query = Query("CSE", 5, "E")
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToTimeTableActivity(query))
+        }
+        binding.button2.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_attendanceManagerFragment)
         }
         return binding.root
     }

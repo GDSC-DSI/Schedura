@@ -7,4 +7,16 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#717171</color>
+    <color name="orange">#FF8222</color>
+    <color name="cardColor1">#3d6d79</color>
+    <color name="cardColor2">#d69d66</color>
+    <color name="cardColor3">#f6bde8</color>
+    <color name="cardColor4">#8cc1a7</color>
+    <color name="cardColor5">#f44b37</color>
+    <color name="cardColor6">#5c82a6</color>
+    <!--SnackBar Colors-->
+    <color name="colorSuccess">#4caf50</color>
+    <color name="colorError">#d32f2f</color>
+    <color name="colorWarning">#ff9800</color>
 </resources>
