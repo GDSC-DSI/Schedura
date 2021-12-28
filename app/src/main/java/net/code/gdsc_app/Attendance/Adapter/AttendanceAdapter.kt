@@ -1,15 +1,19 @@
 package net.code.gdsc_app.Attendance.Adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import net.code.gdsc_app.Attendance.Database.Attendance
 import net.code.gdsc_app.Attendance.Database.AttendanceViewmodel
+import net.code.gdsc_app.R
 import net.code.gdsc_app.databinding.ItemAttendanceBinding
+import net.code.gdsc_app.utils.Constants
 
 class AttendanceAdapter(
     val attendanceViewmodel: AttendanceViewmodel,
@@ -25,7 +29,7 @@ class AttendanceAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val binding = ItemAttendanceBinding.inflate(layoutInflater, parent, false)
-        return ViewHolder(binding)
+        return ViewHolder(binding, parent.context)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -36,10 +40,11 @@ class AttendanceAdapter(
 //        }
     }
 
-    class ViewHolder(val binding: ItemAttendanceBinding) :
+    class ViewHolder(val binding: ItemAttendanceBinding, val context : Context) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: Attendance, attendanceViewmodel: AttendanceViewmodel) {
+            binding.attendanceCard.background = ContextCompat.getDrawable(context, Constants.getRandomCardColor())
             binding.subName.text = item.subject
             binding.went.text = item.attended.toString()
             binding.total.text = item.total.toString()
