@@ -55,50 +55,58 @@ class WeekDayFragment : Fragment() {
         val query = arguments?.getParcelable<Query>("query")
         val weekDay: Constants.Companion.WeekDay =
             arguments?.getSerializable("weekDay") as Constants.Companion.WeekDay
-
+        binding.pBar.visibility = View.VISIBLE
         if (query != null) {
             viewModel.getTimetable(query, weekDay)
         }
-
+        binding.pBar.visibility = View.INVISIBLE
         when (weekDay) {
             Constants.Companion.WeekDay.MONDAY -> {
                 viewModel.mondayData.observe(viewLifecycleOwner, {
-                    binding.subject.text = it.body()!!.id.toString()
+                    binding.time.text = it.body()!!.id.toString()
+                    binding.subject.text = it.body()!!.title
                 })
             }
             Constants.Companion.WeekDay.TUESDAY -> {
                 viewModel.tuesdayData.observe(viewLifecycleOwner, {
-                    binding.subject.text = it.body()!!.id.toString()
+                    binding.time.text = it.body()!!.id.toString()
+                    binding.subject.text = it.body()!!.title
                 })
             }
             Constants.Companion.WeekDay.WEDNESDAY -> {
                 viewModel.wednesdayData.observe(viewLifecycleOwner, {
-                    binding.subject.text = it.body()!!.id.toString()
+                    binding.time.text = it.body()!!.id.toString()
+                    binding.subject.text = it.body()!!.title
                 })
             }
             Constants.Companion.WeekDay.THURSDAY -> {
                 viewModel.thursdayData.observe(viewLifecycleOwner, {
-                    binding.subject.text = it.body()!!.id.toString()
+                    binding.time.text = it.body()!!.id.toString()
+                    binding.subject.text = it.body()!!.title
                 })
             }
             Constants.Companion.WeekDay.FRIDAY -> {
                 viewModel.fridayData.observe(viewLifecycleOwner, {
-                    binding.subject.text = it.body()!!.id.toString()
+                    binding.time.text = it.body()!!.id.toString()
+                    binding.subject.text = it.body()!!.title
                 })
             }
             Constants.Companion.WeekDay.SATURDAY -> {
                 viewModel.saturdayData.observe(viewLifecycleOwner, {
-                    binding.subject.text = it.body()!!.id.toString()
+                    binding.time.text = it.body()!!.id.toString()
+                    binding.subject.text = it.body()!!.title
                 })
             }
         }
 
 
         binding.swipeRefresh.setOnRefreshListener {
+            binding.pBar.visibility = View.VISIBLE
             viewModel.getTimetable(query!!, weekDay)
             if (viewModel.getTimetable(query!!, weekDay) != null) {
                 binding.swipeRefresh.isRefreshing = false
             }
+            binding.pBar.visibility = View.INVISIBLE
         }
     }
 }
