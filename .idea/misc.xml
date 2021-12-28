@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/12mad/StudioProjects/ASJ/app/src/main/res/layout/activity_time_table.xml" value="0.17314814814814813" />
+        <entry key="..\:/Users/12mad/StudioProjects/ASJ/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/Users/12mad/StudioProjects/ASJ/app/src/main/res/layout/fragment_weekday.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/12mad/StudioProjects/ASJ/app/src/main/res/layout/recycler_view_item.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/ASJ/app/src/main/res/drawable/avd_bin_open_close_black_24dp.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/ASJ/app/src/main/res/layout/fragment_add_subject.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/ASJ/app/src/main/res/layout/fragment_attendance_manager.xml" value="0.1793478260869565" />

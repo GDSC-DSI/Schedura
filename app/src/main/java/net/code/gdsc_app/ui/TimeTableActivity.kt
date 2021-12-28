@@ -5,21 +5,32 @@ import android.os.Bundle
 import android.view.View
 import android.view.Window
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import androidx.navigation.navArgs
 import androidx.navigation.ui.setupWithNavController
 import androidx.viewpager.widget.ViewPager
-import com.google.android.material.bottomnavigation.BottomNavigationMenu
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.tabs.TabLayout
 import net.code.gdsc_app.R
 import net.code.gdsc_app.TimeTableAdapter
+import net.code.gdsc_app.models.Query
+import net.code.gdsc_app.networking.Repository
+import net.code.gdsc_app.viewmodels.TimeTableViewModel
 
 class TimeTableActivity : AppCompatActivity() {
     lateinit var tabLayout: TabLayout
     lateinit var viewPager: ViewPager
+    private val repository by lazy {
+        Repository()
+    }
+    private val args : TimeTableActivityArgs by navArgs()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_time_table)
+
+        val query : Query = args.query
+
         supportActionBar?.hide()
 //        setTheme(R.style.AppTheme)
         tabLayout = findViewById(R.id.tabLayout)
@@ -31,7 +42,7 @@ class TimeTableActivity : AppCompatActivity() {
         tabLayout.addTab(tabLayout.newTab().setText("Friday"))
         tabLayout.addTab(tabLayout.newTab().setText("Saturday"))
         tabLayout.tabGravity = TabLayout.GRAVITY_FILL
-        val adapter = TimeTableAdapter(this, supportFragmentManager, tabLayout.tabCount)
+        val adapter = TimeTableAdapter(this, supportFragmentManager, tabLayout.tabCount, query)
         val window: Window = this.window
         window.statusBarColor = ContextCompat.getColor(this, R.color.transparent)
         viewPager.adapter = adapter
