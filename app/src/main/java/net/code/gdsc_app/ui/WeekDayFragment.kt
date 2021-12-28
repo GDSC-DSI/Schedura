@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import net.code.gdsc_app.Attendance.Adapter.RecyclerViewAdapter
 import net.code.gdsc_app.R
 import net.code.gdsc_app.databinding.FragmentWeekdayBinding
 import net.code.gdsc_app.models.Query
@@ -53,36 +55,40 @@ private val repository : Repository by lazy {
         if (query != null){
             viewModel.getTimetable(query,weekDay)
         }
+        val adapter:RecyclerViewAdapter = RecyclerViewAdapter()
+
+        binding.recyclerView.layoutManager=LinearLayoutManager(activity)
+        binding.recyclerView.adapter=adapter
 
         when (weekDay){
             Constants.Companion.WeekDay.MONDAY -> {
                 viewModel.mondayData.observe(viewLifecycleOwner, {
-                    binding.subject.text = it.body()!!.id.toString()
+                    adapter.submitList(arrayListOf(it))
                 })
             }
             Constants.Companion.WeekDay.TUESDAY -> {
                 viewModel.tuesdayData.observe(viewLifecycleOwner, {
-                    binding.subject.text = it.body()!!.id.toString()
+
                 })
             }
             Constants.Companion.WeekDay.WEDNESDAY -> {
                 viewModel.wednesdayData.observe(viewLifecycleOwner, {
-                    binding.subject.text = it.body()!!.id.toString()
+
                 })
             }
             Constants.Companion.WeekDay.THURSDAY -> {
                 viewModel.thursdayData.observe(viewLifecycleOwner, {
-                    binding.subject.text = it.body()!!.id.toString()
+
                 })
             }
             Constants.Companion.WeekDay.FRIDAY -> {
                 viewModel.fridayData.observe(viewLifecycleOwner, {
-                    binding.subject.text = it.body()!!.id.toString()
+
                 })
             }
             Constants.Companion.WeekDay.SATURDAY -> {
                 viewModel.saturdayData.observe(viewLifecycleOwner, {
-                    binding.subject.text = it.body()!!.id.toString()
+
                 })
             }
         }
