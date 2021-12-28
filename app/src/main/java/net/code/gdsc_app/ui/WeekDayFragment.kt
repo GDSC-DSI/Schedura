@@ -63,32 +63,32 @@ private val repository : Repository by lazy {
         when (weekDay){
             Constants.Companion.WeekDay.MONDAY -> {
                 viewModel.mondayData.observe(viewLifecycleOwner, {
-                    adapter.submitList(arrayListOf(it))
+                    adapter.submitList(it.body())
                 })
             }
             Constants.Companion.WeekDay.TUESDAY -> {
                 viewModel.tuesdayData.observe(viewLifecycleOwner, {
-
+                    adapter.submitList(it.body())
                 })
             }
             Constants.Companion.WeekDay.WEDNESDAY -> {
                 viewModel.wednesdayData.observe(viewLifecycleOwner, {
-
+                    adapter.submitList(it.body())
                 })
             }
             Constants.Companion.WeekDay.THURSDAY -> {
                 viewModel.thursdayData.observe(viewLifecycleOwner, {
-
+                    adapter.submitList(it.body())
                 })
             }
             Constants.Companion.WeekDay.FRIDAY -> {
                 viewModel.fridayData.observe(viewLifecycleOwner, {
-
+                    adapter.submitList(it.body())
                 })
             }
             Constants.Companion.WeekDay.SATURDAY -> {
                 viewModel.saturdayData.observe(viewLifecycleOwner, {
-
+                    adapter.submitList(it.body())
                 })
             }
         }

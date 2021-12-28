@@ -7,7 +7,6 @@ import android.view.ViewParent
 import android.widget.ListView
 import android.widget.TextView
 import androidx.recyclerview.widget.*
-import com.google.android.gms.ads.mediation.Adapter
 import net.code.gdsc_app.R
 import net.code.gdsc_app.models.Post
 import net.code.gdsc_app.ui.WeekDayFragment
@@ -40,7 +39,7 @@ class RecyclerViewAdapter : ListAdapter<Post, RecyclerViewAdapter.MyViewHolder>(
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val postItem= getItem(position)
-     holder.tvTime.setText(postItem.title)
+     holder.tvTime.setText(postItem.name)
      holder.tvSubject.setText(postItem.body)
 
     }

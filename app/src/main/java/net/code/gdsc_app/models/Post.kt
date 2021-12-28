@@ -1,8 +1,9 @@
 package net.code.gdsc_app.models
 
 data class Post(
-    val userId : Int,
-    val id : Int,
-    val title : String,
-    val body : String
+    val postId: Int,
+    val id: Int,
+    val name: String,
+    val email: String,
+    val body: String
 )
