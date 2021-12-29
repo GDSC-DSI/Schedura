@@ -9,12 +9,14 @@
     <color name="white">#FFFFFFFF</color>
     <color name="transparent">#717171</color>
     <color name="orange">#FF8222</color>
-    <color name="cardColor1">#3d6d79</color>
-    <color name="cardColor2">#d69d66</color>
-    <color name="cardColor3">#f6bde8</color>
-    <color name="cardColor4">#8cc1a7</color>
-    <color name="cardColor5">#f44b37</color>
-    <color name="cardColor6">#5c82a6</color>
+    <color name="blueMain">#0668E1</color>
+    <color name="lightMain">#61A3F3</color>
+    <color name="cardColor1">#C7A7F1</color>
+    <color name="cardColor2">#EAE1D2</color>
+    <color name="cardColor3">#BECFFB</color>
+    <color name="cardColor4">#CCFFCC</color>
+    <color name="cardColor5">#B7EFEA</color>
+    <color name="cardColor6">#FBA3DE</color>
     <!--SnackBar Colors-->
     <color name="colorSuccess">#4caf50</color>
     <color name="colorError">#d32f2f</color>

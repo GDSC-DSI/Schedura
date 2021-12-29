@@ -11,6 +11,7 @@ import net.code.gdsc_app.Attendance.Database.Attendance
 import net.code.gdsc_app.Attendance.Database.AttendanceViewmodel
 import net.code.gdsc_app.R
 import net.code.gdsc_app.databinding.FragmentAddSubjectBinding
+import net.code.gdsc_app.utils.Constants
 import net.code.gdsc_app.utils.Snacker
 
 @Suppress("DEPRECATION")
@@ -36,7 +37,8 @@ class AddSubjectFragment : Fragment() {
                     subject = binding.userToDoEditText.text.toString(),
                     attended = 0,
                     total = 0,
-                    percentage = 100
+                    percentage = 100,
+                    bg = Constants.getRandomCardColor()
                 )
                 attendance.id = System.currentTimeMillis()
                 attendanceViewmodel.insert(attendance)

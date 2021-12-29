@@ -7,11 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import net.code.gdsc_app.R
-import net.code.gdsc_app.databinding.FragmentHomeBinding
-import net.code.gdsc_app.models.Query
+import net.code.gdsc_app.databinding.FragmentDashBoardBinding
 
-class HomeFragment : Fragment() {
-    private var _binding: FragmentHomeBinding? = null
+class DashBoardFragment : Fragment() {
+    private var _binding: FragmentDashBoardBinding? = null
     private val binding
         get() = _binding!!
 
@@ -20,15 +19,14 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentDashBoardBinding.inflate(inflater, container, false)
 
         binding.ttButton.setOnClickListener {
-            val query = Query("CSE", 5, "E")
-            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToTimeTableActivity(query))
+            findNavController().navigate(R.id.action_dashBoardFragment_to_homeFragment)
         }
-//        binding.button2.setOnClickListener {
-//            findNavController().navigate(R.id.action_homeFragment_to_attendanceManagerFragment)
-//        }
+        binding.attButton.setOnClickListener {
+            findNavController().navigate(R.id.action_dashBoardFragment_to_attendanceManagerFragment)
+        }
         return binding.root
     }
 }

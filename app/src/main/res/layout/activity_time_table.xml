@@ -15,9 +15,9 @@
             android:id="@+id/toolbarDashboard"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/white"
-            app:title="Tableworm"
-            app:titleTextColor="@color/black" />
+            android:background="@color/lightMain"
+            app:title="Time Table"
+            app:titleTextColor="@color/white" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -26,9 +26,9 @@
         android:layout_below="@id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FF8F39"
+        android:background="@color/cardview_light_background"
         app:tabMode="auto"
-        app:tabSelectedTextColor="@color/black"
+        app:tabSelectedTextColor="@color/blueMain"
         app:tabTextColor="@color/black"/>
 
     <androidx.viewpager.widget.ViewPager

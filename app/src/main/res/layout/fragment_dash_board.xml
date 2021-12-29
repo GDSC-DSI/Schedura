@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/lightMain"
-            app:title="Time Table"
+            app:title="Schedura"
             app:titleTextColor="@color/white" />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -22,7 +22,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="75dp">
+        android:layout_marginTop="75dp"
+        android:background="@color/white">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,44 +36,47 @@
                 android:layout_width="wrap_content"
                 android:layout_height="300dp"
                 android:layout_gravity="center"
-                android:src="@drawable/pic" />
+                android:src="@drawable/welcome" />
 
-            <Spinner
-                android:id="@+id/spinner1"
-                android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20dp"
-                android:entries="@array/Branch"
-                android:spinnerMode="dropdown" />
-
-            <Spinner
-                android:id="@+id/spinner2"
-                android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="16dp"
-                android:entries="@array/Semester"
-                android:spinnerMode="dropdown" />
-
-            <Spinner
-                android:id="@+id/spinner3"
-                android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="16dp"
-                android:entries="@array/Section"
-                android:spinnerMode="dropdown" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:text="Hey! Welcome to Schedura"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/tt_button"
                 android:layout_width="250dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="32dp"
                 android:backgroundTint="@color/lightMain"
-                android:text="Proceed"
+                android:text="Get Timetable"
+                android:textAllCaps="false"
                 android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/att_button"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/lightMain"
+                android:text="Manage Attendance"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="bottom|center"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/img" />
+
 
         </LinearLayout>
     </ScrollView>
