@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/dashBoardFragment">
 
     <fragment
         android:id="@+id/homeFragment"
@@ -12,10 +12,7 @@
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_timeTableActivity"
-            app:destination="@id/timeTableActivity" />
-        <action
-            android:id="@+id/action_homeFragment_to_attendanceManagerFragment"
-            app:destination="@id/attendanceManagerFragment"
+            app:destination="@id/timeTableActivity"
             app:popUpTo="@id/homeFragment" />
     </fragment>
     <activity
@@ -53,7 +50,7 @@
         <action
             android:id="@+id/action_addSubjectFragment_to_attendanceManagerFragment"
             app:destination="@id/attendanceManagerFragment"
-            app:popUpToInclusive="false" />
+            app:popUpTo="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/attendanceManagerFragment"
@@ -64,5 +61,18 @@
             android:id="@+id/action_attendanceManagerFragment_to_addSubjectFragment"
             app:destination="@id/addSubjectFragment"
             app:popUpTo="@id/attendanceManagerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashBoardFragment"
+        android:name="net.code.gdsc_app.ui.DashBoardFragment"
+        android:label="DashBoardFragment" >
+        <action
+            android:id="@+id/action_dashBoardFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/dashBoardFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_attendanceManagerFragment"
+            app:destination="@id/attendanceManagerFragment"
+            app:popUpTo="@id/dashBoardFragment" />
     </fragment>
 </navigation>

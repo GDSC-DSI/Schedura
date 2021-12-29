@@ -44,7 +44,7 @@ class AttendanceAdapter(
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: Attendance, attendanceViewmodel: AttendanceViewmodel) {
-            binding.attendanceCard.background = ContextCompat.getDrawable(context, Constants.getRandomCardColor())
+            binding.attendanceCard.background = ContextCompat.getDrawable(context, item.bg)
             binding.subName.text = item.subject
             binding.went.text = item.attended.toString()
             binding.total.text = item.total.toString()

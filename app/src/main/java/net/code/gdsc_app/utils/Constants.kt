@@ -16,7 +16,13 @@ class Constants {
         }
 
         fun getRandomCardColor() : Int{
-            val cardColors : Array<Int> = arrayOf(R.color.cardColor1,R.color.cardColor2,R.color.cardColor3,R.color.cardColor4,R.color.cardColor5,R.color.cardColor6)
+            val cardColors : Array<Int> = arrayOf(
+                R.color.cardColor1,
+                R.color.cardColor2,
+                R.color.cardColor3,
+                R.color.cardColor4,
+                R.color.cardColor5,
+                R.color.cardColor6)
             return cardColors.random()
         }
     }

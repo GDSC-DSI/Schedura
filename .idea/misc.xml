@@ -9,6 +9,16 @@
         <entry key="..\:/Development/Android/ASJ/app/src/main/res/layout/fragment_monday.xml" value="0.25" />
         <entry key="..\:/Development/Android/ASJ/app/src/main/res/layout/fragment_weekday.xml" value="0.264" />
         <entry key="..\:/Development/Android/ASJ/app/src/main/res/layout/item_attendance.xml" value="0.4" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/ASJ/app/src/main/res/drawable/ic_baseline_check_24.xml" value="0.23333333333333334" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/ASJ/app/src/main/res/drawable/line.xml" value="0.23333333333333334" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/ASJ/app/src/main/res/layout/activity_time_table.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/ASJ/app/src/main/res/layout/fragment_add_subject.xml" value="0.21514818880351264" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/ASJ/app/src/main/res/layout/fragment_attendance_manager.xml" value="0.264" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/ASJ/app/src/main/res/layout/fragment_dash_board.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/ASJ/app/src/main/res/layout/fragment_home.xml" value="0.176" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/ASJ/app/src/main/res/layout/item_attendance.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/ASJ/app/src/main/res/layout/recycler_view_item.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/ASJ/app/src/main/res/layout/tmp.xml" value="0.2" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/GdscApp/app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/GdscApp/app/src/main/res/layout/fragment_home.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/GdscApp/app/src/main/res/layout/fragment_time_table.xml" value="0.25416666666666665" />
