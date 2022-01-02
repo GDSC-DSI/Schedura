@@ -17,6 +17,16 @@
     <color name="cardColor4">#CCFFCC</color>
     <color name="cardColor5">#B7EFEA</color>
     <color name="cardColor6">#FBA3DE</color>
+    <color name="cardColor7">#DF67FFE0</color>
+    <color name="cardColor8">#DFFFC074</color>
+    <color name="cardColor9">#DD55FAA5</color>
+    <color name="cardColor10">#D8FF7F99</color>
+    <color name="cardColor11">#DCA679F8</color>
+    <color name="cardColor12">#5DC9FA</color>
+    <color name="cardColor13">#E6FF9879</color>
+    <color name="cardColor14">#FBA3DE</color>
+    <color name="cardColor15">#D38F77FB</color>
+    <color name="dark">#171717</color>
     <!--SnackBar Colors-->
     <color name="colorSuccess">#4caf50</color>
     <color name="colorError">#d32f2f</color>

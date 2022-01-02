@@ -6,8 +6,14 @@
         <entry key="..\:/ASJ/app/src/main/res/drawable/avd_bin_open_close_black_24dp.xml" value="0.2064814814814815" />
         <entry key="..\:/ASJ/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2064814814814815" />
         <entry key="..\:/ASJ/app/src/main/res/drawable/line.xml" value="0.2064814814814815" />
+        <entry key="..\:/ASJ/app/src/main/res/layout/activity_time_table.xml" value="0.20416666666666666" />
+        <entry key="..\:/ASJ/app/src/main/res/layout/fragment_add_subject.xml" value="0.20416666666666666" />
+        <entry key="..\:/ASJ/app/src/main/res/layout/fragment_attendance_manager.xml" value="0.20416666666666666" />
         <entry key="..\:/ASJ/app/src/main/res/layout/fragment_dash_board.xml" value="0.20416666666666666" />
         <entry key="..\:/ASJ/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/ASJ/app/src/main/res/layout/fragment_weekday.xml" value="0.20416666666666666" />
+        <entry key="..\:/ASJ/app/src/main/res/layout/item_attendance.xml" value="0.20416666666666666" />
+        <entry key="..\:/ASJ/app/src/main/res/layout/recycler_view_item.xml" value="0.33" />
         <entry key="..\:/Development/Android/ASJ/app/src/main/res/layout/activity_time_table.xml" value="0.25" />
         <entry key="..\:/Development/Android/ASJ/app/src/main/res/layout/fragment_attendance_manager.xml" value="0.12708333333333333" />
         <entry key="..\:/Development/Android/ASJ/app/src/main/res/layout/fragment_home.xml" value="0.23148148148148148" />

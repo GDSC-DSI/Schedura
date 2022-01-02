@@ -16,12 +16,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp">
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="90dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
 
@@ -38,26 +38,57 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="start"
                     android:background="#FFFFFF"
-                    android:gravity="center"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:padding="8dp">
 
+                    <LinearLayout
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvTimeHour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Time"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/tvTimeMinute"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Time"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
                     <TextView
-                        android:id="@+id/tvTime"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Time"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/black" />
 
                     <TextView
                         android:id="@+id/tvSubject"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
                         android:text="Subject"
                         android:textColor="#2243F8"
-                        android:textSize="15sp" />
+                        android:textSize="20sp" />
+
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -65,4 +96,5 @@
         </TableRow>
 
     </TableLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
