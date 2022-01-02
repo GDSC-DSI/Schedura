@@ -16,6 +16,7 @@ import net.code.gdsc_app.Attendance.Database.AttendanceViewmodel
 import net.code.gdsc_app.R
 import net.code.gdsc_app.databinding.FragmentAttendanceManagerBinding
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
@@ -34,7 +35,12 @@ class AttendanceManagerFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentAttendanceManagerBinding.inflate(inflater, container, false)
-        attendanceViewmodel = ViewModelProviders.of(this).get(AttendanceViewmodel::class.java)
+
+        binding.toolbarDashboard.setNavigationOnClickListener {
+            activity?.onBackPressed()
+        }
+
+        attendanceViewmodel = ViewModelProvider(this)[AttendanceViewmodel::class.java]
         attendanceAdapter = AttendanceAdapter(attendanceViewmodel, binding.rv.rootView,activity)
         binding.rv.adapter = attendanceAdapter
         binding.rv.layoutManager = LinearLayoutManager(context)

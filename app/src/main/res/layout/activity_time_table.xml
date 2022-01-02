@@ -17,7 +17,9 @@
             android:layout_height="match_parent"
             android:background="@color/lightMain"
             app:title="Time Table"
-            app:titleTextColor="@color/white" />
+            app:titleTextColor="@color/white"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:navigationIcon="?attr/homeAsUpIndicator"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
