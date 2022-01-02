@@ -15,7 +15,8 @@ class RecyclerViewAdapter : ListAdapter<Post, RecyclerViewAdapter.MyViewHolder>(
 
 
     class MyViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
-        val tvTime:TextView =itemView.findViewById(R.id.tvTime)
+        val tvTime1:TextView =itemView.findViewById(R.id.tvTimeHour)
+        val tvTime2:TextView =itemView.findViewById(R.id.tvTimeMinute)
         val tvSubject:TextView =itemView.findViewById(R.id.tvSubject)
     }
 
@@ -39,8 +40,9 @@ class RecyclerViewAdapter : ListAdapter<Post, RecyclerViewAdapter.MyViewHolder>(
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val postItem= getItem(position)
-     holder.tvTime.setText(postItem.name)
-     holder.tvSubject.setText(postItem.body)
+//        holder.tvTime1.setText(postItem.name)
+//        holder.tvTime2.setText(postItem.name)
+//        holder.tvSubject.setText(postItem.body)
 
     }
 
