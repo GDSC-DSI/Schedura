@@ -22,6 +22,10 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
+        binding.toolbarDashboard.setNavigationOnClickListener {
+            activity?.onBackPressed()
+        }
+
         binding.ttButton.setOnClickListener {
             val query = Query("CSE", 5, "E")
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToTimeTableActivity(query))

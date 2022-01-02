@@ -27,6 +27,11 @@ class AddSubjectFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentAddSubjectBinding.inflate(inflater, container, false)
+
+        binding.toolbarDashboard.setNavigationOnClickListener {
+            activity?.onBackPressed()
+        }
+
         binding.addSub.setOnClickListener {
             attendanceViewmodel = ViewModelProviders.of(this).get(AttendanceViewmodel::class.java)
             if(binding.userToDoEditText.text.toString() == ""){
