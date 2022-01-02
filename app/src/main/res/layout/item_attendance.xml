@@ -101,6 +101,20 @@
             android:textColor="@color/black"
             android:textSize="14sp" />
 
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/per"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            app:trackCornerRadius="50dp"
+            app:trackThickness="8dp"
+            app:indicatorColor="@color/blueMain"
+            app:trackColor="@color/lightBlue"
+            android:indeterminate="false"
+            />
+
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

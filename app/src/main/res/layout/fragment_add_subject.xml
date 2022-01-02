@@ -32,7 +32,9 @@
         android:layout_marginLeft="32dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="32dp"
-        android:hint="Add an item">
+        android:hint="Add an item"
+        app:hintTextColor="@color/dark"
+        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/userToDoEditText"
@@ -40,8 +42,8 @@
             android:layout_height="wrap_content"
             android:inputType="textAutoCorrect|textCapSentences"
             android:lines="1"
-            android:maxLines="1"
             android:maxLength="22"
+            android:maxLines="1"
             android:textColor="@color/black"
             android:textColorHint="@color/black" />
 

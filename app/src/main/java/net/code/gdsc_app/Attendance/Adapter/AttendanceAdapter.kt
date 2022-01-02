@@ -1,6 +1,7 @@
 package net.code.gdsc_app.Attendance.Adapter
 
 import android.content.Context
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -49,6 +50,9 @@ class AttendanceAdapter(
             binding.went.text = item.attended.toString()
             binding.total.text = item.total.toString()
             binding.per.text = item.percentage.toString()+"%"
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                binding.progressBar.setProgress(item.percentage.toInt(),true)
+            }
             binding.increment.setOnClickListener {
                 item.attended += 1
                 item.total += 1
@@ -57,6 +61,9 @@ class AttendanceAdapter(
                 binding.went.text = item.attended.toString()
                 binding.total.text = item.total.toString()
                 binding.per.text = item.percentage.toString()+"%"
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                    binding.progressBar.setProgress(item.percentage.toInt(),true)
+                }
             }
             binding.decrement.setOnClickListener {
                 item.total += 1
@@ -64,6 +71,9 @@ class AttendanceAdapter(
                 attendanceViewmodel.update(item)
                 binding.total.text = item.total.toString()
                 binding.per.text = item.percentage.toString()+"%"
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                    binding.progressBar.setProgress(item.percentage.toInt(),true)
+                }
             }
         }
     }

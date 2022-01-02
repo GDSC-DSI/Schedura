@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
@@ -51,6 +52,16 @@ class AttendanceManagerFragment : Fragment() {
         binding.floatingActionButton.setOnClickListener {
             findNavController().navigate(R.id.action_attendanceManagerFragment_to_addSubjectFragment)
         }
+
+        //attendance back press
+        val callback = object: OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                findNavController().navigate(R.id.action_attendanceManagerFragment_to_dashBoardFragment)
+            }
+        }
+
+        requireActivity().onBackPressedDispatcher.addCallback(callback)
+
         return binding.root
     }
 
