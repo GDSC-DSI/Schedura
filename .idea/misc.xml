@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/ASJ/app/src/main/res/drawable/avd_bin_open_close_black_24dp.xml" value="0.2064814814814815" />
+        <entry key="..\:/ASJ/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2064814814814815" />
+        <entry key="..\:/ASJ/app/src/main/res/drawable/line.xml" value="0.2064814814814815" />
+        <entry key="..\:/ASJ/app/src/main/res/layout/fragment_dash_board.xml" value="0.20416666666666666" />
+        <entry key="..\:/ASJ/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
         <entry key="..\:/Development/Android/ASJ/app/src/main/res/layout/activity_time_table.xml" value="0.25" />
         <entry key="..\:/Development/Android/ASJ/app/src/main/res/layout/fragment_attendance_manager.xml" value="0.12708333333333333" />
         <entry key="..\:/Development/Android/ASJ/app/src/main/res/layout/fragment_home.xml" value="0.23148148148148148" />
@@ -26,7 +31,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
