@@ -1,6 +1,7 @@
 package net.code.gdsc_app.ui
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -60,16 +61,17 @@ private val repository : Repository by lazy {
         binding.recyclerView.layoutManager=LinearLayoutManager(activity)
         binding.recyclerView.adapter=adapter
 
-//        binding.swipeToRefresh.setOnRefreshListener {
-//            if (query != null) {
-//                viewModel.getTimetable(query,weekDay)
-//            }
-//        }
-//        binding.swipeToRefresh.isRefreshing = false
+        binding.swipeToRefresh.setOnRefreshListener {
+            if (query != null) {
+                viewModel.getTimetable(query,weekDay)
+            }
+        }
+        binding.swipeToRefresh.isRefreshing = false
         when (weekDay){
             Constants.Companion.WeekDay.MONDAY -> {
                 viewModel.mondayData.observe(viewLifecycleOwner, {
                     adapter.submitList(it.body())
+                    Log.d("Debz", "Data Calling")
                 })
             }
             Constants.Companion.WeekDay.TUESDAY -> {

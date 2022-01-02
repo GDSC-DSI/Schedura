@@ -37,11 +37,12 @@ class AttendanceManagerFragment : Fragment() {
         _binding = FragmentAttendanceManagerBinding.inflate(inflater, container, false)
 
         binding.toolbarDashboard.setNavigationOnClickListener {
-            activity?.onBackPressed()
+//            activity?.onBackPressed()
+            findNavController().navigate(R.id.action_attendanceManagerFragment_to_dashBoardFragment)
         }
 
         attendanceViewmodel = ViewModelProvider(this)[AttendanceViewmodel::class.java]
-        attendanceAdapter = AttendanceAdapter(attendanceViewmodel, binding.rv.rootView,activity)
+        attendanceAdapter = AttendanceAdapter(attendanceViewmodel, binding.rv.rootView, activity)
         binding.rv.adapter = attendanceAdapter
         binding.rv.layoutManager = LinearLayoutManager(context)
         enableSwipeToDeleteAndUndo(attendanceAdapter)
@@ -60,7 +61,7 @@ class AttendanceManagerFragment : Fragment() {
         }
 
         //attendance back press
-        val callback = object: OnBackPressedCallback(true) {
+        val callback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 findNavController().navigate(R.id.action_attendanceManagerFragment_to_dashBoardFragment)
             }
