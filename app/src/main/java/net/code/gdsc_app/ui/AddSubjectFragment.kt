@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import net.code.gdsc_app.Attendance.Database.Attendance
@@ -31,6 +32,13 @@ class AddSubjectFragment : Fragment() {
         binding.toolbarDashboard.setNavigationOnClickListener {
             activity?.onBackPressed()
         }
+
+        val callback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                findNavController().navigate(R.id.action_addSubjectFragment_to_attendanceManagerFragment)
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(callback)
 
         binding.addSub.setOnClickListener {
             attendanceViewmodel = ViewModelProviders.of(this).get(AttendanceViewmodel::class.java)
