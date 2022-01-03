@@ -65,8 +65,9 @@ private val repository : Repository by lazy {
             if (query != null) {
                 viewModel.getTimetable(query,weekDay)
             }
+            binding.swipeToRefresh.isRefreshing = false
         }
-        binding.swipeToRefresh.isRefreshing = false
+
         when (weekDay){
             Constants.Companion.WeekDay.MONDAY -> {
                 viewModel.mondayData.observe(viewLifecycleOwner, {

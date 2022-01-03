@@ -108,12 +108,11 @@
             android:layout_below="@+id/per"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="25dp"
-            app:trackCornerRadius="50dp"
-            app:trackThickness="8dp"
+            android:indeterminate="false"
             app:indicatorColor="@color/blueMain"
             app:trackColor="@color/lightBlue"
-            android:indeterminate="false"
-            />
+            app:trackCornerRadius="50dp"
+            app:trackThickness="8dp" />
 
     </RelativeLayout>
 
