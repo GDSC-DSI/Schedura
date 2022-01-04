@@ -16,7 +16,7 @@
             android:id="@+id/toolbarDashboard"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/lightMain"
+            android:background="@color/material_red"
             app:title="Add any subject"
             app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
             app:titleTextColor="@color/white"
@@ -76,7 +76,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         android:src="@drawable/ic_baseline_check_24"
-        app:backgroundTint="@color/lightMain"
+        app:backgroundTint="@color/material_red"
         app:tint="@color/white" />
 
 </RelativeLayout>

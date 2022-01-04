@@ -109,10 +109,12 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="25dp"
             android:indeterminate="false"
-            app:indicatorColor="@color/blueMain"
-            app:trackColor="@color/lightBlue"
+            app:indicatorColor="@color/material_red"
+            app:trackColor="#FFD3D3"
             app:trackCornerRadius="50dp"
-            app:trackThickness="8dp" />
+            app:trackThickness="8dp" >
+
+        </com.google.android.material.progressindicator.LinearProgressIndicator>
 
     </RelativeLayout>
 
