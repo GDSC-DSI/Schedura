@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
@@ -15,6 +16,7 @@ import net.code.gdsc_app.Attendance.Database.AttendanceViewmodel
 import net.code.gdsc_app.R
 import net.code.gdsc_app.databinding.FragmentAttendanceManagerBinding
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
@@ -33,8 +35,14 @@ class AttendanceManagerFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentAttendanceManagerBinding.inflate(inflater, container, false)
-        attendanceViewmodel = ViewModelProviders.of(this).get(AttendanceViewmodel::class.java)
-        attendanceAdapter = AttendanceAdapter(attendanceViewmodel, binding.rv.rootView,activity)
+
+        binding.toolbarDashboard.setNavigationOnClickListener {
+//            activity?.onBackPressed()
+            findNavController().navigate(R.id.action_attendanceManagerFragment_to_dashBoardFragment)
+        }
+
+        attendanceViewmodel = ViewModelProvider(this)[AttendanceViewmodel::class.java]
+        attendanceAdapter = AttendanceAdapter(attendanceViewmodel, binding.rv.rootView, activity)
         binding.rv.adapter = attendanceAdapter
         binding.rv.layoutManager = LinearLayoutManager(context)
         enableSwipeToDeleteAndUndo(attendanceAdapter)
@@ -51,6 +59,16 @@ class AttendanceManagerFragment : Fragment() {
         binding.floatingActionButton.setOnClickListener {
             findNavController().navigate(R.id.action_attendanceManagerFragment_to_addSubjectFragment)
         }
+
+        //attendance back press
+        val callback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                findNavController().navigate(R.id.action_attendanceManagerFragment_to_dashBoardFragment)
+            }
+        }
+
+        requireActivity().onBackPressedDispatcher.addCallback(callback)
+
         return binding.root
     }
 

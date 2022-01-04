@@ -50,7 +50,7 @@
         <action
             android:id="@+id/action_addSubjectFragment_to_attendanceManagerFragment"
             app:destination="@id/attendanceManagerFragment"
-            app:popUpTo="@id/homeFragment" />
+            app:popUpTo="@id/attendanceManagerFragment" />
     </fragment>
     <fragment
         android:id="@+id/attendanceManagerFragment"
@@ -61,6 +61,9 @@
             android:id="@+id/action_attendanceManagerFragment_to_addSubjectFragment"
             app:destination="@id/addSubjectFragment"
             app:popUpTo="@id/attendanceManagerFragment" />
+        <action
+            android:id="@+id/action_attendanceManagerFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
     </fragment>
     <fragment
         android:id="@+id/dashBoardFragment"

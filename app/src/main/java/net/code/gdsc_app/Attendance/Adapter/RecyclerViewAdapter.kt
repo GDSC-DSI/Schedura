@@ -3,28 +3,28 @@ package net.code.gdsc_app.Attendance.Adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewParent
-import android.widget.ListView
 import android.widget.TextView
 import androidx.recyclerview.widget.*
+import com.google.gson.JsonArray
 import net.code.gdsc_app.R
-import net.code.gdsc_app.models.Post
-import net.code.gdsc_app.ui.WeekDayFragment
+import net.code.gdsc_app.models.Subject
+import net.code.gdsc_app.utils.Constants
 
-class RecyclerViewAdapter : ListAdapter<Post, RecyclerViewAdapter.MyViewHolder>(Diff_Callback()) {
+class RecyclerViewAdapter : ListAdapter<Subject, RecyclerViewAdapter.MyViewHolder>(Diff_Callback()) {
 
 
     class MyViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
-        val tvTime:TextView =itemView.findViewById(R.id.tvTime)
+        val tvTime1:TextView =itemView.findViewById(R.id.tvTimeHour)
+        val tvTime2:TextView =itemView.findViewById(R.id.tvTimeMinute)
         val tvSubject:TextView =itemView.findViewById(R.id.tvSubject)
     }
 
-    class Diff_Callback:DiffUtil.ItemCallback<Post>(){
-        override fun areItemsTheSame(oldItem: Post, newItem: Post): Boolean {
-            return oldItem.id == newItem.id
+    class Diff_Callback:DiffUtil.ItemCallback<Subject>(){
+        override fun areItemsTheSame(oldItem: Subject, newItem: Subject): Boolean {
+            return oldItem == newItem
         }
 
-        override fun areContentsTheSame(oldItem: Post, newItem: Post): Boolean {
+        override fun areContentsTheSame(oldItem: Subject, newItem: Subject): Boolean {
             return oldItem==newItem
         }
 
@@ -38,9 +38,10 @@ class RecyclerViewAdapter : ListAdapter<Post, RecyclerViewAdapter.MyViewHolder>(
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val postItem= getItem(position)
-     holder.tvTime.setText(postItem.name)
-     holder.tvSubject.setText(postItem.body)
+        val subject = getItem(position)
+        holder.tvTime1.text = Constants.timingsMap[position]?.get(0)
+        holder.tvTime2.text = Constants.timingsMap[position]?.get(1)
+        holder.tvSubject.text = subject
 
     }
 

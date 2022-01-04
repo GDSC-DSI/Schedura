@@ -1,15 +1,18 @@
 package net.code.gdsc_app.ui
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.gson.GsonBuilder
 import net.code.gdsc_app.Attendance.Adapter.RecyclerViewAdapter
 import net.code.gdsc_app.R
 import net.code.gdsc_app.databinding.FragmentWeekdayBinding
+import net.code.gdsc_app.models.Subject
 import net.code.gdsc_app.models.Query
 import net.code.gdsc_app.networking.Repository
 import net.code.gdsc_app.utils.Constants
@@ -59,6 +62,13 @@ private val repository : Repository by lazy {
 
         binding.recyclerView.layoutManager=LinearLayoutManager(activity)
         binding.recyclerView.adapter=adapter
+
+        binding.swipeToRefresh.setOnRefreshListener {
+            if (query != null) {
+                viewModel.getTimetable(query,weekDay)
+            }
+            binding.swipeToRefresh.isRefreshing = false
+        }
 
         when (weekDay){
             Constants.Companion.WeekDay.MONDAY -> {
