@@ -49,14 +49,16 @@ class HomeFragment : Fragment() {
             }
 
             else {
+                val branch = binding.spinner1.selectedItem.toString()
+                val sem = binding.spinner2.selectedItem.toString()
+                val sec = binding.spinner3.selectedItem.toString()
 
-                val query = Query("CSE", 5, "E")
+                val query = Query(branch, sem, sec)
                 findNavController().navigate(
                     HomeFragmentDirections.actionHomeFragmentToTimeTableActivity(
                         query
                     )
                 )
-
             }
 
         }

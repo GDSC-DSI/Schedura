@@ -8,9 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.gson.GsonBuilder
 import net.code.gdsc_app.Attendance.Adapter.RecyclerViewAdapter
 import net.code.gdsc_app.R
 import net.code.gdsc_app.databinding.FragmentWeekdayBinding
+import net.code.gdsc_app.models.Subject
 import net.code.gdsc_app.models.Query
 import net.code.gdsc_app.networking.Repository
 import net.code.gdsc_app.utils.Constants
@@ -72,7 +74,6 @@ private val repository : Repository by lazy {
             Constants.Companion.WeekDay.MONDAY -> {
                 viewModel.mondayData.observe(viewLifecycleOwner, {
                     adapter.submitList(it.body())
-                    Log.d("Debz", "Data Calling")
                 })
             }
             Constants.Companion.WeekDay.TUESDAY -> {
