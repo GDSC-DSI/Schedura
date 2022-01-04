@@ -13,7 +13,7 @@
             android:id="@+id/toolbarDashboard"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/lightMain"
+            android:background="@color/material_red"
             app:title="Schedura"
             app:titleTextColor="@color/white" />
 
@@ -47,27 +47,41 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/black" />
 
-            <Button
+            <androidx.cardview.widget.CardView
                 android:id="@+id/tt_button"
                 android:layout_width="250dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="32dp"
-                android:backgroundTint="@color/lightMain"
-                android:text="Get Timetable"
-                android:textAllCaps="false"
-                android:textColor="@color/white" />
+                android:backgroundTint="@color/material_red"
+                app:cardCornerRadius="25dp">
 
-            <Button
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Get Timetable"
+                    android:textColor="@color/white" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:id="@+id/att_button"
                 android:layout_width="250dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="16dp"
-                android:backgroundTint="@color/lightMain"
+                android:backgroundTint="@color/material_red"
                 android:text="Manage Attendance"
-                android:textAllCaps="false"
-                android:textColor="@color/white" />
+                app:cardCornerRadius="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Manage Attendance"
+                    android:textColor="@color/white" />
+            </androidx.cardview.widget.CardView>
+
 
             <ImageView
                 android:id="@+id/imageView2"

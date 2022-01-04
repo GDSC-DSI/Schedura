@@ -53,7 +53,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Time"
-                            android:textColor="@color/black"
+                            android:textColor="@color/material_blue"
                             android:layout_gravity="center"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -68,7 +68,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Time"
-                            android:textColor="@color/black"
+                            android:textColor="@color/material_blue"
                             android:layout_gravity="center"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -86,7 +86,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="Subject"
-                        android:textColor="#2243F8"
+                        android:textColor="@color/material_red"
                         android:textSize="20sp" />
 
                 </LinearLayout>

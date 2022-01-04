@@ -13,11 +13,11 @@
             android:id="@+id/toolbarDashboard"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/lightMain"
-            app:title="Time Table"
-            app:titleTextColor="@color/white"
+            android:background="@color/material_red"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:navigationIcon="?attr/homeAsUpIndicator"/>
+            app:navigationIcon="?attr/homeAsUpIndicator"
+            app:title="Time Table"
+            app:titleTextColor="@color/white" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -66,23 +66,32 @@
                 android:entries="@array/Section"
                 android:spinnerMode="dropdown" />
 
-            <Button
+
+            <androidx.cardview.widget.CardView
                 android:id="@+id/tt_button"
                 android:layout_width="250dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
-                android:backgroundTint="@color/lightMain"
-                android:text="Proceed"
-                android:textColor="@color/white" />
+                android:backgroundTint="@color/material_red"
+                app:cardCornerRadius="25dp">
 
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="60dp"
-                    android:layout_gravity="bottom|center"
-                    android:src="@drawable/img"
-                    android:layout_marginTop="20dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Proceed"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="bottom|center"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/img" />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>
