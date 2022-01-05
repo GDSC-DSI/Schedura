@@ -63,12 +63,6 @@ private val repository : Repository by lazy {
         binding.recyclerView.layoutManager=LinearLayoutManager(activity)
         binding.recyclerView.adapter=adapter
 
-        binding.swipeToRefresh.setOnRefreshListener {
-            if (query != null) {
-                viewModel.getTimetable(query,weekDay)
-            }
-            binding.swipeToRefresh.isRefreshing = false
-        }
 
         when (weekDay){
             Constants.Companion.WeekDay.MONDAY -> {

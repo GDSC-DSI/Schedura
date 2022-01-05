@@ -13,7 +13,7 @@
             android:id="@+id/toolbarDashboard"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/material_red"
+            android:background="@color/material_blue"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:navigationIcon="?attr/homeAsUpIndicator"
             app:title="Time Table"
@@ -54,7 +54,7 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="16dp"
-                android:entries="@array/Semester"
+                android:entries="@array/Year"
                 android:spinnerMode="dropdown" />
 
             <Spinner
@@ -79,6 +79,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:fontFamily="@font/sofiaprosoftmedium"
                     android:gravity="center"
                     android:text="Proceed"
                     android:textColor="@color/white"

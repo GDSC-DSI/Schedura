@@ -33,15 +33,15 @@ class HomeFragment : Fragment() {
             if(binding.spinner1.selectedItem.toString() == "Branch" &&
                 binding.spinner2.selectedItem.toString() == "Semester" &&
                  binding.spinner3.selectedItem.toString() == "Section" ){
-                Snacker(requireActivity().findViewById(android.R.id.content), "Select branch, semester and section").error()
+                Snacker(requireActivity().findViewById(android.R.id.content), "Select branch, year and section").error()
             }
 
             else if (binding.spinner1.selectedItem.toString() == "Branch") {
                 Snacker(requireActivity().findViewById(android.R.id.content), "Branch not selected").error()
             }
 
-            else if (binding.spinner2.selectedItem.toString() == "Semester") {
-                Snacker(requireActivity().findViewById(android.R.id.content), "Semester not selected").error()
+            else if (binding.spinner2.selectedItem.toString() == "Year") {
+                Snacker(requireActivity().findViewById(android.R.id.content), "Year not selected").error()
             }
 
             else if (binding.spinner3.selectedItem.toString() == "Section") {
@@ -50,10 +50,10 @@ class HomeFragment : Fragment() {
 
             else {
                 val branch = binding.spinner1.selectedItem.toString()
-                val sem = binding.spinner2.selectedItem.toString()
+                val year = binding.spinner2.selectedItem.toString()
                 val sec = binding.spinner3.selectedItem.toString()
 
-                val query = Query(branch, sem, sec)
+                val query = Query(branch, year, sec)
                 findNavController().navigate(
                     HomeFragmentDirections.actionHomeFragmentToTimeTableActivity(
                         query

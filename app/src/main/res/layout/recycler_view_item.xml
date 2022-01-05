@@ -52,9 +52,10 @@
                             android:id="@+id/tvTimeHour"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/sofiaprosoftregular"
                             android:text="Time"
                             android:textColor="@color/material_blue"
-                            android:layout_gravity="center"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
@@ -67,9 +68,10 @@
                             android:id="@+id/tvTimeMinute"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/sofiaprosoftregular"
                             android:text="Time"
                             android:textColor="@color/material_blue"
-                            android:layout_gravity="center"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
@@ -84,6 +86,7 @@
                         android:id="@+id/tvSubject"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:fontFamily="@font/sofiaprosoftmedium"
                         android:gravity="center"
                         android:text="Subject"
                         android:textColor="@color/material_red"
