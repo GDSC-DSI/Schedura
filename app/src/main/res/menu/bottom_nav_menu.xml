@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/bottom_timetable"
+        android:iconTint="@color/black"
+        android:title="Timetable" />
+
+    <item
+        android:id="@+id/aboutFragment"
+        android:icon="@drawable/bottom_code"
+        android:iconTint="@color/black"
+        android:title="About GDSC" />
+
+    <item
+        android:id="@+id/attendanceManagerFragment"
+        android:icon="@drawable/bottom_group"
+        android:iconTint="@color/black"
+        android:title="Attendance" />
+
+</menu>
