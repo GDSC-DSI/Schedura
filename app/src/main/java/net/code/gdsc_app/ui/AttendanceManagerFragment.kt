@@ -37,7 +37,6 @@ class AttendanceManagerFragment : Fragment() {
         _binding = FragmentAttendanceManagerBinding.inflate(inflater, container, false)
 
         binding.toolbarDashboard.setNavigationOnClickListener {
-//            activity?.onBackPressed()
             findNavController().navigate(R.id.action_attendanceManagerFragment_to_dashBoardFragment)
         }
 
@@ -61,13 +60,12 @@ class AttendanceManagerFragment : Fragment() {
         }
 
         //attendance back press
-        val callback = object : OnBackPressedCallback(true) {
-            override fun handleOnBackPressed() {
-                findNavController().navigate(R.id.action_attendanceManagerFragment_to_dashBoardFragment)
-            }
-        }
-
-        requireActivity().onBackPressedDispatcher.addCallback(callback)
+//        val callback = object : OnBackPressedCallback(true) {
+//            override fun handleOnBackPressed() {
+//                findNavController().navigate(R.id.action_attendanceManagerFragment_to_dashBoardFragment)
+//            }
+//        }
+//        requireActivity().onBackPressedDispatcher.addCallback(callback)
 
         return binding.root
     }
