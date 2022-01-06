@@ -15,8 +15,9 @@
             android:id="@+id/toolbarDashboard"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/lightMain"
+            android:background="@color/material_blue"
             app:title="Time Table"
+            style="@style/sofiafont"
             app:titleTextColor="@color/white"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:navigationIcon="?attr/homeAsUpIndicator"/>
@@ -30,7 +31,7 @@
         android:layout_height="wrap_content"
         android:background="@color/cardview_light_background"
         app:tabMode="auto"
-        app:tabSelectedTextColor="@color/blueMain"
+        app:tabSelectedTextColor="@color/material_red"
         app:tabTextColor="@color/black"/>
 
     <androidx.viewpager.widget.ViewPager

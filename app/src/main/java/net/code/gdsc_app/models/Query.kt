@@ -6,6 +6,6 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class Query(
     val branch : String,
-    val sem : String,
+    val year : String,
     val sec : String
 ) : Parcelable

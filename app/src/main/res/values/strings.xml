@@ -9,8 +9,8 @@
         <item>ECE</item>
         <item>AI</item>
     </string-array>
-    <string-array name="Semester">
-        <item>Semester</item>
+    <string-array name="Year">
+        <item>Year</item>
         <item>1st</item>
         <item>2nd</item>
         <item>3rd</item>

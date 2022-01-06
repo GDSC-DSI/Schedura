@@ -25,9 +25,10 @@
             android:layout_centerHorizontal="true"
             android:layout_marginStart="18dp"
             android:layout_marginTop="25dp"
+            android:fontFamily="@font/sofiaprosoftmedium"
             android:text="MATHS"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
         <LinearLayout
             android:id="@+id/ll"
@@ -97,6 +98,7 @@
             android:layout_below="@+id/sub_name"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="25dp"
+            android:fontFamily="@font/sofiaprosoftregular"
             android:text="100%"
             android:textColor="@color/black"
             android:textSize="14sp" />
@@ -112,7 +114,9 @@
             app:indicatorColor="@color/colorSuccess"
             app:trackColor="@color/cardColor10"
             app:trackCornerRadius="50dp"
-            app:trackThickness="8dp" />
+            app:trackThickness="8dp" >
+
+        </com.google.android.material.progressindicator.LinearProgressIndicator>
 
     </RelativeLayout>
 

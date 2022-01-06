@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+    android:theme="@style/Theme.MaterialComponents.Light"
     tools:context=".ui.AddSubjectFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -16,11 +16,11 @@
             android:id="@+id/toolbarDashboard"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/lightMain"
+            android:background="@color/material_blue"
             app:title="Add any subject"
             app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
             app:titleTextColor="@color/white"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
             app:navigationIcon="?attr/homeAsUpIndicator"/>
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -35,9 +35,8 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="32dp"
         android:hint="Add an item"
-        app:hintTextColor="@color/black"
-        android:backgroundTint="@color/black"
-        app:counterTextColor="@color/black"
+        android:forceDarkAllowed="false"
+        app:hintTextColor="@color/dark"
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -49,8 +48,7 @@
             android:maxLength="22"
             android:maxLines="1"
             android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:backgroundTint="@color/black"/>
+            android:textColorHint="@color/black" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -60,13 +58,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/toDoCustomTextInput"
-        android:text="* Only upto 22 characters allowed"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
-        android:textColor="@color/black"/>
+        android:fontFamily="@font/sofiaprosoftmediumitalic"
+        android:text="* Only upto 22 characters allowed"
+        android:textColor="@color/black" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add_sub"
@@ -79,7 +78,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         android:src="@drawable/ic_baseline_check_24"
-        app:backgroundTint="@color/lightMain"
+        app:backgroundTint="@color/material_red"
         app:tint="@color/white" />
 
 </RelativeLayout>
