@@ -33,12 +33,12 @@ class AddSubjectFragment : Fragment() {
             activity?.onBackPressed()
         }
 
-        val callback = object : OnBackPressedCallback(true) {
-            override fun handleOnBackPressed() {
-                findNavController().navigate(R.id.action_addSubjectFragment_to_attendanceManagerFragment)
-            }
-        }
-        requireActivity().onBackPressedDispatcher.addCallback(callback)
+//        val callback = object : OnBackPressedCallback(true) {
+//            override fun handleOnBackPressed() {
+//                findNavController().navigate(R.id.action_addSubjectFragment_to_attendanceManagerFragment)
+//            }
+//        }
+//        requireActivity().onBackPressedDispatcher.addCallback(callback)
 
         binding.addSub.setOnClickListener {
             attendanceViewmodel = ViewModelProviders.of(this).get(AttendanceViewmodel::class.java)
