@@ -111,10 +111,10 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="25dp"
             android:indeterminate="false"
-            app:indicatorColor="@color/colorSuccess"
-            app:trackColor="@color/cardColor10"
+            app:indicatorColor="@color/material_blue"
+            app:trackColor="@color/material_blue_light"
             app:trackCornerRadius="50dp"
-            app:trackThickness="8dp" >
+            app:trackThickness="8dp">
 
         </com.google.android.material.progressindicator.LinearProgressIndicator>
 
