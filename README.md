@@ -50,18 +50,17 @@
 - Minimum API Version: 21
 
 
-
 <p><h2><a id="index7"></a>🖼 App Screenshots</h2></p>
-<table>
+
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/61552810/148320903-5c59b1da-2a57-43a4-9421-d8d99b377ad4.jpg" width=250 height=480></td>
-     <td><img src="https://user-images.githubusercontent.com/61552810/148320902-8679a6d9-cb5a-4110-8e0a-efcb0d9a9683.jpg" width=250 height=480></td>
-    <td><img src="https://user-images.githubusercontent.com/61552810/148320910-2971eafa-20d7-4c39-87fc-3edd4e80b4fa.jpg" width=250 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/77199373/148533264-372711b2-687e-4ce8-9682-cfd236849e27.png" width=250 height=480></td>
+     <td><img src="https://user-images.githubusercontent.com/77199373/148533282-85f597ee-3306-44ed-8d34-e60603782f23.png" width=250 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/77199373/148533287-9b70c146-0266-4599-8cb6-20e74cc59fc6.png" width=250 height=480></td>
   </tr>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/61552810/148320909-ebaa9f80-d537-42e6-9dd6-2000f6229a2b.jpg" width=250 height=480></td>
-    <td><img src="https://user-images.githubusercontent.com/61552810/148320900-fe89b2af-37c4-4d3f-9f81-e26648b6c34c.jpg" width=250 height=480></td>
-    <td><img src="https://user-images.githubusercontent.com/61552810/148320905-66da9a50-382d-4355-9b4f-0ba7a2c7498e.jpg" width=250 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/77199373/148533311-97774205-5dd3-4219-8e4d-2a8fb89abb02.png" width=250 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/77199373/148533346-8a19f5ee-a2a8-42c7-8477-c8bca6f81ca2.png" width=250 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/77199373/148533361-57af93f1-f261-4679-9a1f-f9cf0e123506.png" width=250 height=480></td>
  </tr>
 <!--   <tr>
     <td><img src="" width=250 height=480></td>
