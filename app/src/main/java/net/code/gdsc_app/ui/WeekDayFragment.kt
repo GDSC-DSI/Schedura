@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.gson.GsonBuilder
@@ -16,6 +17,7 @@ import net.code.gdsc_app.models.Subject
 import net.code.gdsc_app.models.Query
 import net.code.gdsc_app.networking.Repository
 import net.code.gdsc_app.utils.Constants
+import net.code.gdsc_app.utils.Snacker
 import net.code.gdsc_app.viewmodels.TimeTableViewModel
 import net.code.gdsc_app.viewmodels.TimeTableViewModelFactory
 
@@ -96,6 +98,10 @@ private val repository : Repository by lazy {
                 })
             }
         }
+
+        viewModel.errorMessage.observe(viewLifecycleOwner, {
+            Snacker(requireActivity().findViewById(android.R.id.content), it).error()
+        })
     }
 
 
