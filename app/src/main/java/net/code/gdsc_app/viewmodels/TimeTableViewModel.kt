@@ -1,5 +1,7 @@
 package net.code.gdsc_app.viewmodels
 
+import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.*
 import kotlinx.coroutines.launch
 import net.code.gdsc_app.models.Query
@@ -18,43 +20,49 @@ class TimeTableViewModel(
     private val _thursdayData = MutableLiveData<Response<List<Subject>>>()
     private val _fridayData = MutableLiveData<Response<List<Subject>>>()
     private val _saturdayData = MutableLiveData<Response<List<Subject>>>()
+    private val _errorMessage = MutableLiveData<String>()
     val mondayData: LiveData<Response<List<Subject>>> get() = _mondayData
     val tuesdayData: LiveData<Response<List<Subject>>> get() = _tuesdayData
     val wednesdayData: LiveData<Response<List<Subject>>> get() = _wednesdayData
     val thursdayData: LiveData<Response<List<Subject>>> get() = _thursdayData
     val fridayData: LiveData<Response<List<Subject>>> get() = _fridayData
     val saturdayData: LiveData<Response<List<Subject>>> get() = _saturdayData
+    val errorMessage : LiveData<String> get() = _errorMessage
 
     fun getTimetable(query: Query, weekDay: Constants.Companion.WeekDay) {
         val id = Constants.semToYearMap[query.year] + query.branch + query.sec
         viewModelScope.launch {
-            when (weekDay) {
-                Constants.Companion.WeekDay.MONDAY -> {
-                    val response = repository.getSubjects(id, 0)
-                    _mondayData.value = response
+            try {
+                when (weekDay) {
+                    Constants.Companion.WeekDay.MONDAY -> {
+                        val response = repository.getSubjects(id, 0)
+                        _mondayData.value = response
+                    }
+                    Constants.Companion.WeekDay.TUESDAY -> {
+                        val response = repository.getSubjects(id, 1)
+                        _tuesdayData.value = response
+                    }
+                    Constants.Companion.WeekDay.WEDNESDAY -> {
+                        val response = repository.getSubjects(id, 2)
+                        _wednesdayData.value = response
+                    }
+                    Constants.Companion.WeekDay.THURSDAY -> {
+                        val response = repository.getSubjects(id, 3)
+                        _thursdayData.value = response
+                    }
+                    Constants.Companion.WeekDay.FRIDAY -> {
+                        val response = repository.getSubjects(id, 4)
+                        _fridayData.value = response
+                    }
+                    Constants.Companion.WeekDay.SATURDAY -> {
+                        val response = repository.getSubjects(id, 5)
+                        _saturdayData.value = response
+                    }
                 }
-                Constants.Companion.WeekDay.TUESDAY -> {
-                    val response = repository.getSubjects(id, 1)
-                    _tuesdayData.value = response
-                }
-                Constants.Companion.WeekDay.WEDNESDAY -> {
-                    val response = repository.getSubjects(id, 2)
-                    _wednesdayData.value = response
-                }
-                Constants.Companion.WeekDay.THURSDAY -> {
-                    val response = repository.getSubjects(id, 3)
-                    _thursdayData.value = response
-                }
-                Constants.Companion.WeekDay.FRIDAY -> {
-                    val response = repository.getSubjects(id, 4)
-                    _fridayData.value = response
-                }
-                Constants.Companion.WeekDay.SATURDAY -> {
-                    val response = repository.getSubjects(id, 5)
-                    _saturdayData.value = response
-                }
-            }
-        }
+            } catch(e : Exception){
+                _errorMessage.value = "Check your Internet!"
+            }            }
+
     }
 }
 
