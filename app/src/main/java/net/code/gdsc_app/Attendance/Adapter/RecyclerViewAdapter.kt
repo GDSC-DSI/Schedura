@@ -1,9 +1,11 @@
 package net.code.gdsc_app.Attendance.Adapter
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.*
 import com.google.gson.JsonArray
 import net.code.gdsc_app.R
@@ -41,8 +43,11 @@ class RecyclerViewAdapter : ListAdapter<Subject, RecyclerViewAdapter.MyViewHolde
         val subject = getItem(position)
         holder.tvTime1.text = Constants.timingsMap[position]?.get(0)
         holder.tvTime2.text = Constants.timingsMap[position]?.get(1)
-        holder.tvSubject.text = subject
-
+        if(subject != ""){
+            holder.tvSubject.text = subject
+        } else {
+            holder.tvSubject.text = "No Class"
+        }
     }
 
 }

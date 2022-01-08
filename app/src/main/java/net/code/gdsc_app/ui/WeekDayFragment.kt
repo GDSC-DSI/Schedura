@@ -69,32 +69,74 @@ private val repository : Repository by lazy {
         when (weekDay){
             Constants.Companion.WeekDay.MONDAY -> {
                 viewModel.mondayData.observe(viewLifecycleOwner, {
-                    adapter.submitList(it.body())
+                    if(it.body()?.size!! > 0){
+                        binding.noDataText.visibility = View.GONE
+                        binding.recyclerView.visibility = View.VISIBLE
+                        adapter.submitList(it.body())
+                    } else {
+                        binding.recyclerView.visibility = View.GONE
+                        binding.noDataText.visibility = View.VISIBLE
+                    }
                 })
             }
             Constants.Companion.WeekDay.TUESDAY -> {
                 viewModel.tuesdayData.observe(viewLifecycleOwner, {
-                    adapter.submitList(it.body())
+                    if(it.body()?.size!! > 0){
+                        binding.noDataText.visibility = View.GONE
+                        binding.recyclerView.visibility = View.VISIBLE
+                        adapter.submitList(it.body())
+                    } else {
+                        binding.recyclerView.visibility = View.GONE
+                        binding.noDataText.visibility = View.VISIBLE
+                    }
                 })
             }
             Constants.Companion.WeekDay.WEDNESDAY -> {
                 viewModel.wednesdayData.observe(viewLifecycleOwner, {
-                    adapter.submitList(it.body())
+                    if(it.body()?.size!! > 0){
+                        binding.noDataText.visibility = View.GONE
+                        binding.recyclerView.visibility = View.VISIBLE
+                        adapter.submitList(it.body())
+                    } else {
+                        binding.recyclerView.visibility = View.GONE
+                        binding.noDataText.visibility = View.VISIBLE
+                    }
                 })
             }
             Constants.Companion.WeekDay.THURSDAY -> {
                 viewModel.thursdayData.observe(viewLifecycleOwner, {
-                    adapter.submitList(it.body())
+                    if(it.body()?.size!! > 0){
+                        binding.noDataText.visibility = View.GONE
+                        binding.recyclerView.visibility = View.VISIBLE
+                        adapter.submitList(it.body())
+                    } else {
+                        binding.recyclerView.visibility = View.GONE
+                        binding.noDataText.visibility = View.VISIBLE
+                    }
                 })
             }
             Constants.Companion.WeekDay.FRIDAY -> {
                 viewModel.fridayData.observe(viewLifecycleOwner, {
-                    adapter.submitList(it.body())
+                    if(it.body()?.size!! > 0){
+                        binding.noDataText.visibility = View.GONE
+                        binding.recyclerView.visibility = View.VISIBLE
+                        adapter.submitList(it.body())
+                    } else {
+                        binding.recyclerView.visibility = View.GONE
+                        binding.noDataText.visibility = View.VISIBLE
+                    }
                 })
             }
             Constants.Companion.WeekDay.SATURDAY -> {
                 viewModel.saturdayData.observe(viewLifecycleOwner, {
-                    adapter.submitList(it.body())
+                    if(it.body()?.size!! > 0){
+                        binding.noDataText.visibility = View.GONE
+                        binding.recyclerView.visibility = View.VISIBLE
+                        adapter.submitList(it.body())
+                    } else {
+                        binding.recyclerView.visibility = View.GONE
+                        binding.noDataText.visibility = View.VISIBLE
+                    }
                 })
             }
         }
