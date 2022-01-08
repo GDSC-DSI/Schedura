@@ -90,7 +90,7 @@
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="wrap_content"
-                android:layout_height="100dp"
+                android:layout_height="80dp"
                 android:layout_gravity="bottom|center"
                 android:layout_marginTop="40dp"
                 android:src="@drawable/img" />
