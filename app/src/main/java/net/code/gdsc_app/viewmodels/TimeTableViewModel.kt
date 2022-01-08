@@ -59,6 +59,8 @@ class TimeTableViewModel(
                         _saturdayData.value = response
                     }
                 }
+            } catch (n : NullPointerException){
+                _errorMessage.value = "No Data"
             } catch(e : Exception){
                 _errorMessage.value = "Check your Internet!"
             }            }
