@@ -7,9 +7,24 @@
 
     <!-- TODO: Update blank fragment layout -->
     <ImageView
+        android:id="@+id/splashIcon"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_centerInParent="true"
         android:src="@drawable/schedura" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/splashIcon"
+        android:gravity="center"
+        android:text="SCHEDURA"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/img" />
 </RelativeLayout>
