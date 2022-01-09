@@ -23,7 +23,7 @@
 <p><h2><a id="index1"></a>:beginner: Problem Statement :</h2></p>
 
 <p>
-Shortage of attendance is one of the major concerns amongst students. Maintaining track of classes attended and missed is a big challenge and most of the students fail to track them down accurately. This sometimes leaves them with a lesser percentage of attendance than required.  Another challenge that is faced by most of the students is to check their daily class schedule via PDF files stored in their devices. It is a bit time consuming and an alternative for it was the need of the hour.   
+Shortage of attendance is one of the major concerns amongst students. Maintaining track of classes attended and missed is a big challenge and most of the students fail to track them down accurately. This sometimes leaves them with a lesser percentage of attendance than required.  Another challenge that is faced by most students is to check their daily class schedule via PDF files stored on their devices. It is a bit time-consuming and an alternative for it was the need of the hour.   
 </p>
  
 <p><h2><a id="index2"></a>✨ Proposed Solution :</h2></p>
@@ -31,10 +31,10 @@ Shortage of attendance is one of the major concerns amongst students. Maintainin
 This project proposes an “Attendance Manager System” which also has a “Digital Time Table” in it.
 </p>
 <p>
-The attendance manager system allows students to track their attendance in any subject of their choice. They just have to add the subject of their choice and mark attended or missed for each class they have. Then app will automatically generate and display a progress bar indicating their attendance percentage. 
+The attendance management system allows students to track their attendance in any subject of their choice. They just have to add the subject of their choice and mark attended or missed for each class they have. Then the app will automatically generate and display a progress bar indicating their attendance percentage. 
 </p>
 <p>
-The digital time table takes data from user like – year, branch & semester. Then it fetches & displays the timetable for the given data. Students get their class schedule in few clicks, that too in a hassle-free manner.
+The digital timetable takes data from users like – year, branch & semester. Then it fetches & displays the timetable for the given data. Students get their class schedule in a few clicks, that too in a hassle-free manner.
 </p>
 <!-- 
 <p><h2><a id="index3"></a>👨‍💻 Functionality & Concepts use :</h2></p>
@@ -64,7 +64,7 @@ The digital time table takes data from user like – year, branch & semester. Th
 <p></p>
 <p><h2><a id="index5"></a>🛠 How To Setup :</h2></p>
 
-<p><a href="https://github.com/coder2699/Dare2Change/releases/download/v1/dare2change_v1.apk">Click Here Download Apk file</a>.  After that install the apk file, the app will start installing on your device (minimum requirement of device is Android 5.0). Once the app is installed, click on open the app, your app will open then your are good to go, app is ready for its use.</p>
+<p><a href="https://github.com/coder2699/Dare2Change/releases/download/v1/dare2change_v1.apk">Click Here Download Apk file</a>.  After that install the apk file, the app will start installing on the device (the minimum requirement of the device is Android 5.0). Once the app is installed, click on open the app, the app will open then one is good to go, the app is ready for its use.</p>
 
 
 <p><h2><a id="index6"></a>❕ Permissions :</h2></p>
