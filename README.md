@@ -8,7 +8,7 @@
 <ul>  
   <li><a href="#index1">Problem Statement</a><br></li>
   <li><a href="#index2">Proposed Solution</a><br></li>
-<!--   <li><a href="#index3">Functionality & Concepts used</a><br></li> -->
+  <li><a href="#index3">Functionality & Concepts used</a><br></li>
   <li><a href="#index4">Application Link </a><br></li>
   <li><a href="#index5">How to Setup</a><br></li>
   <li><a href="#index6">Permissions</a><br></li>
@@ -36,35 +36,35 @@ The attendance management system allows students to track their attendance in an
 <p>
 The digital timetable takes data from users like – year, branch & semester. Then it fetches & displays the timetable for the given data. Students get their class schedule in a few clicks, that too in a hassle-free manner.
 </p>
-<!-- 
+
 <p><h2><a id="index3"></a>👨‍💻 Functionality & Concepts use :</h2></p>
 <ul>
   <li>
     The App has a very simple and interactive ui which helps the students to track their attendance accurately and provides them with a digital time table of their classes
   </li>
   <li>
-    Simple & Easy Views Design :
+    Navigation : The application has multiple screens which are connected via Jetpack Navigation Component. 
   </li>
   <li>
-    RecyclerView :
+    RecyclerView : RecyclerViews are implemented at both the screens, where the timetable is displayed & also where the attendance progress is displayed. These recycler views display cards with relevant information for the user.
   </li>
   <li>
-    LiveData & Room Database : 
+    Room Database : The concept of Data Persistence using Room Database and SQLite is implemented in the application for the attendance manager feature. The subject name, number of classes held and attended are a crucial set of information that must be preserved for the user and must be displayed correctly whenever user navigates back to the attendance manager.
   </li>
   <li>
-    Retrofit:
+    Connect App to the Internet: Our team has developed an api <a href="https://github.com/GDSC-DSI/api">(refer)</a> which fetches the timetable for a student after accepting information like year, section & branch. We are using HTTP requests and Retrofit in order to fetch data from the api and then we display the data into cards inside recycler views of timetable feature.
   </li>
   <li>
-    
+    Webview: A webview is also implemented in the app. This webview displays the webpage of <a href="https://gdsc.community.dev/dayananda-sagar-institutions-bengaluru/">GDSC-DSI</a> community.
   </li>
-</ul> -->
+ </ul>
 
 <p><h2><a id="index4"></a>📱 Application Link :</h2></p>
-<a href=""><img style="padding-top: 5pt;" src="https://img.shields.io/badge/Download-apk-blue?style=for-the-badge&amp;logo=android" alt="Download App"></a>
+<a href="https://bit.ly/schedura-apk"><img style="padding-top: 5pt;" src="https://img.shields.io/badge/Download-apk-blue?style=for-the-badge&amp;logo=android" alt="Download App"></a>
 <p></p>
 <p><h2><a id="index5"></a>🛠 How To Setup :</h2></p>
 
-<p><a href="https://github.com/coder2699/Dare2Change/releases/download/v1/dare2change_v1.apk">Click Here Download Apk file</a>.  After that install the apk file, the app will start installing on the device (the minimum requirement of the device is Android 5.0). Once the app is installed, click on open the app, the app will open then one is good to go, the app is ready for its use.</p>
+<p><a href="https://bit.ly/schedura-apk">Click Here Download Apk file</a>.  After that install the apk file, the app will start installing on the device (the minimum requirement of the device is Android 5.0). Once the app is installed, click on open the app, the app will open then one is good to go, the app is ready for its use.</p>
 
 
 <p><h2><a id="index6"></a>❕ Permissions :</h2></p>
