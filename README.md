@@ -60,11 +60,11 @@ The digital timetable takes data from users like – year, branch & semester. Th
  </ul>
 
 <p><h2><a id="index4"></a>📱 Application Link :</h2></p>
-<a href="https://bit.ly/schedura-apk"><img style="padding-top: 5pt;" src="https://img.shields.io/badge/Download-apk-blue?style=for-the-badge&amp;logo=android" alt="Download App"></a>
+<a href="https://play.google.com/store/apps/details?id=net.code.gdsc_app" target="_blank"><img style="padding-top: 5pt;" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Download App" width="30%" height="30%"></a>
 <p></p>
 <p><h2><a id="index5"></a>🛠 How To Setup :</h2></p>
 
-<p><a href="https://bit.ly/schedura-apk">Click Here Download Apk file</a>.  After that install the apk file, the app will start installing on the device (the minimum requirement of the device is Android 5.0). Once the app is installed, click on open the app, the app will open then one is good to go, the app is ready for its use.</p>
+<p><a href="https://play.google.com/store/apps/details?id=net.code.gdsc_app" target="_blank">Click Here to install the app</a>.  After that install the apk file, the app will start installing on the device (the minimum requirement of the device is Android 5.0). Once the app is installed, click on open the app, the app will open then one is good to go, the app is ready for its use.</p>
 
 
 <p><h2><a id="index6"></a>❕ Permissions :</h2></p>
