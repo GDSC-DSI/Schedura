@@ -39,6 +39,7 @@ class TimeTableActivity : AppCompatActivity() {
 
         val query : Query = args.query
 
+
         supportActionBar?.hide()
 //        setTheme(R.style.AppTheme)
         tabLayout = findViewById(R.id.tabLayout)

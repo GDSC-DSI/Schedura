@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.gson.GsonBuilder
@@ -65,10 +66,13 @@ private val repository : Repository by lazy {
         binding.recyclerView.layoutManager=LinearLayoutManager(activity)
         binding.recyclerView.adapter=adapter
 
+        var loadProgress = binding.ProgressBar
 
         when (weekDay){
             Constants.Companion.WeekDay.MONDAY -> {
+
                 viewModel.mondayData.observe(viewLifecycleOwner, {
+                    loadProgress.visibility =View.GONE
                     if(it.body()?.size!! > 0){
                         binding.noDataText.visibility = View.GONE
                         binding.recyclerView.visibility = View.VISIBLE
@@ -81,6 +85,7 @@ private val repository : Repository by lazy {
             }
             Constants.Companion.WeekDay.TUESDAY -> {
                 viewModel.tuesdayData.observe(viewLifecycleOwner, {
+                    loadProgress.visibility =View.GONE
                     if(it.body()?.size!! > 0){
                         binding.noDataText.visibility = View.GONE
                         binding.recyclerView.visibility = View.VISIBLE
@@ -93,6 +98,7 @@ private val repository : Repository by lazy {
             }
             Constants.Companion.WeekDay.WEDNESDAY -> {
                 viewModel.wednesdayData.observe(viewLifecycleOwner, {
+                    loadProgress.visibility =View.GONE
                     if(it.body()?.size!! > 0){
                         binding.noDataText.visibility = View.GONE
                         binding.recyclerView.visibility = View.VISIBLE
@@ -105,6 +111,7 @@ private val repository : Repository by lazy {
             }
             Constants.Companion.WeekDay.THURSDAY -> {
                 viewModel.thursdayData.observe(viewLifecycleOwner, {
+                    loadProgress.visibility =View.GONE
                     if(it.body()?.size!! > 0){
                         binding.noDataText.visibility = View.GONE
                         binding.recyclerView.visibility = View.VISIBLE
@@ -117,6 +124,7 @@ private val repository : Repository by lazy {
             }
             Constants.Companion.WeekDay.FRIDAY -> {
                 viewModel.fridayData.observe(viewLifecycleOwner, {
+                    loadProgress.visibility =View.GONE
                     if(it.body()?.size!! > 0){
                         binding.noDataText.visibility = View.GONE
                         binding.recyclerView.visibility = View.VISIBLE
@@ -129,6 +137,7 @@ private val repository : Repository by lazy {
             }
             Constants.Companion.WeekDay.SATURDAY -> {
                 viewModel.saturdayData.observe(viewLifecycleOwner, {
+                    loadProgress.visibility =View.GONE
                     if(it.body()?.size!! > 0){
                         binding.noDataText.visibility = View.GONE
                         binding.recyclerView.visibility = View.VISIBLE
