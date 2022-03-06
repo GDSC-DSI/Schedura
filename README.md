@@ -38,11 +38,11 @@
 <p><a href="https://github.com/coder2699/Dare2Change/releases/download/v1/dare2change_v1.apk">Click Here Download Apk file</a>.  After that install the apk file, the app will start installing on your device (minimum requirement of device is Android 5.0). Once the app is installed, click on open the app, your app will open then your are good to go, app is ready for its use.</p>
 
 
-<p><h2><a id="index4"></a>👨‍💻 Tech Stack</h2></p>
+<p><h2><a id="index4"></a>👨‍💻 MAD ScoreCard</h2></p>
+<img src="https://user-images.githubusercontent.com/77199373/156941797-acb09caa-dec2-440f-a0fa-01cd0cc5ca1f.png" width=480 height= 250>
 
 <p><h2><a id="index5"></a>❕ Permissions</h2></p>
 - Internet
-
 
 <p><h2><a id="index6"></a>⛏ Requirements</h2></p>
 
