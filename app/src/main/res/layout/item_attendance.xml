@@ -26,6 +26,7 @@
             android:layout_marginStart="18dp"
             android:layout_marginTop="25dp"
             android:fontFamily="@font/sofiaprosoftmedium"
+            android:paddingLeft="25dp"
             android:text="MATHS"
             android:textColor="@color/black"
             android:textSize="18sp" />
@@ -99,6 +100,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="25dp"
             android:fontFamily="@font/sofiaprosoftregular"
+            android:paddingLeft="25dp"
             android:text="100%"
             android:textColor="@color/black"
             android:textSize="14sp" />
