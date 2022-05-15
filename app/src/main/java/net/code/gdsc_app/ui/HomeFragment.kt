@@ -23,7 +23,7 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-
+        requireActivity().window.setStatusBarColor(this.getResources().getColor(R.color.material_blue))
         binding.toolbarDashboard.setNavigationOnClickListener {
             activity?.onBackPressed()
         }

@@ -20,7 +20,7 @@ class AboutFragment : Fragment(R.layout.fragment_about) {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentAboutBinding.inflate(inflater, container, false)
-
+        requireActivity().window.setStatusBarColor(this.getResources().getColor(R.color.material_blue))
         val url = "https://gdsc.community.dev/dayananda-sagar-institutions-bengaluru/"
 
         binding.webViewResource.apply {

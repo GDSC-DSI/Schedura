@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/Theme.MaterialComponents.Light"
@@ -10,19 +11,21 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/addHeading"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbarDashboard"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/material_blue"
-            app:title="Add any subject"
-            app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
-            app:titleTextColor="@color/white"
             android:theme="@style/ThemeOverlay.AppCompat.Light"
             app:navigationIcon="?attr/homeAsUpIndicator"
-            app:navigationIconTint="@color/white"/>
+            app:navigationIconTint="@color/white"
+            app:title="Add any subject"
+            app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
+            app:titleTextColor="@color/white" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -31,14 +34,14 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/addHeading"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="32dp"
-        android:hint="Add an item"
         android:forceDarkAllowed="false"
+        android:hint="Add a subject"
         app:hintTextColor="@color/dark"
-        >
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addHeading">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/userToDoEditText"
@@ -53,33 +56,88 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <TextView
         android:id="@+id/charLimit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/toDoCustomTextInput"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="16dp"
         android:fontFamily="@font/sofiaprosoftmediumitalic"
         android:text="* Only upto 22 characters allowed"
-        android:textColor="@color/black" />
+        android:textColor="@color/dark"
+        android:layout_marginRight="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toDoCustomTextInput"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/presentClassNumberInput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toDoCustomTextInput"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/totalClassNumberInput"
+        android:forceDarkAllowed="false"
+        android:hint="Classes Present"
+        app:hintTextColor="@color/dark"
+        android:layout_marginRight="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/totalClassNumberInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/charLimit">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/presentClassNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:inputType="numberPassword"
+            android:maxLength="5"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/totalClassNumberInput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="32dp"
+        android:forceDarkAllowed="false"
+        android:hint="Total Classes"
+        app:hintTextColor="@color/dark"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/presentClassNumberInput"
+        app:layout_constraintTop_toBottomOf="@+id/charLimit">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/totalClassNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:inputType="numberPassword"
+            android:maxLength="5"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/add_sub"
+        android:id="@+id/addSub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/charLimit"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
+        style="@style/Widget.Material3.FloatingActionButton.Primary"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="32dp"
         android:src="@drawable/ic_baseline_check_24"
         app:backgroundTint="@color/material_red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalClassNumberInput"
         app:tint="@color/white" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

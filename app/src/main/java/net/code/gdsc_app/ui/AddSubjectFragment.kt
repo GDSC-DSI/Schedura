@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
@@ -26,30 +27,46 @@ class AddSubjectFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         _binding = FragmentAddSubjectBinding.inflate(inflater, container, false)
-
+        requireActivity().window.setStatusBarColor(this.getResources().getColor(R.color.material_blue))
         binding.toolbarDashboard.setNavigationOnClickListener {
             activity?.onBackPressed()
         }
 
-//        val callback = object : OnBackPressedCallback(true) {
-//            override fun handleOnBackPressed() {
-//                findNavController().navigate(R.id.action_addSubjectFragment_to_attendanceManagerFragment)
-//            }
-//        }
-//        requireActivity().onBackPressedDispatcher.addCallback(callback)
+        binding.presentClassNumber.transformationMethod = null
+        binding.totalClassNumber.transformationMethod = null
 
         binding.addSub.setOnClickListener {
+            var presentClasses = binding.presentClassNumber.text.toString()
+            var totalClasses = binding.totalClassNumber.text.toString()
             attendanceViewmodel = ViewModelProviders.of(this).get(AttendanceViewmodel::class.java)
-            if(binding.userToDoEditText.text.toString() == ""){
-                Snacker(it,"This Field can't be empty").error()
+            if (binding.userToDoEditText.text.toString() == "") {
+                Snacker(it, "This Field can't be empty").error()
+            }
+            else if (binding.presentClassNumber.text.toString() == ""
+            ) {
+                Snacker(it, "Enter the number of classes present").error()
+            }
+            else if (binding.totalClassNumber.text.toString() == ""
+            ) {
+                Snacker(it, "Enter the total number of classes").error()
+            }
+            else if (binding.totalClassNumber.text.toString().toLong() == 0L) {
+                Snacker(it, "Total Classes cannot be zero").error()
+            }
+            else if (binding.totalClassNumber.text.toString()
+                    .toLong() < binding.presentClassNumber.text.toString().toLong()
+            ) {
+                Snacker(it, "Total classes cannot be less than present classes").error()
+            }
+            else if (presentClasses == "." || totalClasses =="."){
+                Snacker(it, "Invalid Characters")
             }
             else {
                 val attendance = Attendance(
                     subject = binding.userToDoEditText.text.toString(),
-                    attended = 0,
-                    total = 0,
+                    attended = binding.presentClassNumber.text.toString().toLong(),
+                    total = binding.totalClassNumber.text.toString().toLong(),
                     percentage = 100,
                     bg = Constants.getRandomCardColor()
                 )

@@ -41,6 +41,10 @@ private val repository : Repository by lazy {
     Repository()
 }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        requireActivity().window.setStatusBarColor(this.getResources().getColor(R.color.material_blue))
+    }
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_weekday, container, false)

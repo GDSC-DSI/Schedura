@@ -35,16 +35,16 @@ class AttendanceManagerFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentAttendanceManagerBinding.inflate(inflater, container, false)
-
+        requireActivity().window.setStatusBarColor(this.getResources().getColor(R.color.material_blue))
         binding.toolbarDashboard.setNavigationOnClickListener {
             findNavController().navigate(R.id.action_attendanceManagerFragment_to_dashBoardFragment)
         }
 
         attendanceViewmodel = ViewModelProvider(this)[AttendanceViewmodel::class.java]
-        attendanceAdapter = AttendanceAdapter(attendanceViewmodel, binding.rv.rootView, activity)
+        attendanceAdapter = AttendanceAdapter(attendanceViewmodel, binding.rv.rootView, requireContext() ,activity)
         binding.rv.adapter = attendanceAdapter
         binding.rv.layoutManager = LinearLayoutManager(context)
-        enableSwipeToDeleteAndUndo(attendanceAdapter)
+//
         attendanceViewmodel.allLists.observe(viewLifecycleOwner, Observer { list ->
             if (list.isEmpty()) {
                 binding.anim.visibility = View.VISIBLE
@@ -59,43 +59,6 @@ class AttendanceManagerFragment : Fragment() {
             findNavController().navigate(R.id.action_attendanceManagerFragment_to_addSubjectFragment)
         }
 
-        //attendance back press
-//        val callback = object : OnBackPressedCallback(true) {
-//            override fun handleOnBackPressed() {
-//                findNavController().navigate(R.id.action_attendanceManagerFragment_to_dashBoardFragment)
-//            }
-//        }
-//        requireActivity().onBackPressedDispatcher.addCallback(callback)
-
         return binding.root
-    }
-
-    private fun enableSwipeToDeleteAndUndo(attendanceAdapter: AttendanceAdapter) {
-        val swipeToDeleteCallback = object : SwipeToDeleteCallback(context) {
-            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, i: Int) {
-                val position = viewHolder.adapterPosition
-                attendanceAdapter.removeitem(position)
-                val item = attendanceAdapter.getList()[position]
-                AlertDialog.Builder(requireContext())
-                    .setTitle("Delete")
-                    .setMessage("Are you sure you want to delete?")
-                    .setPositiveButton("Yes") { _, dialogInterface ->
-                        Snackbar
-                            .make(
-                                binding.coordLayout,
-                                "Item is removed from the list.",
-                                Snackbar.LENGTH_SHORT
-                            )
-                            .show()
-                    }
-                    .setNegativeButton("No") { _, dialogInterface ->
-                        attendanceAdapter.restoreItem(item, position)
-                    }
-                    .setCancelable(false)
-                    .show()
-            }
-        }
-        val itemTouchhelper = ItemTouchHelper(swipeToDeleteCallback)
-        itemTouchhelper.attachToRecyclerView(binding.rv)
     }
 }

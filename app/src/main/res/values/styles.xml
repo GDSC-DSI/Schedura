@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme.NoActionBar" parent="Theme.Material3.Light.NoActionBar">
         <item name="android:forceDarkAllowed" tools:ignore="NewApi">false</item>
+        <item name="colorSecondaryContainer">@color/bottomNavC</item>
     </style>
 
     <style name="sofiafont" parent="@android:style/TextAppearance.Small">
         <item name="android:fontFamily">@font/sofiaprosoftbold</item>
     </style>
+
+
+
 </resources>

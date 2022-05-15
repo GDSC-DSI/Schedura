@@ -13,9 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GdscApp">
         <activity
-            android:name=".MyCustomAppIntro"
-            android:exported="false" />
-        <activity
             android:name=".SplashActivity"
             android:exported="true"
             android:label="@string/app_name"

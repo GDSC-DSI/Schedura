@@ -20,7 +20,7 @@ class DashBoardFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentDashBoardBinding.inflate(inflater, container, false)
-
+        requireActivity().window.setStatusBarColor(this.getResources().getColor(R.color.material_blue))
         binding.ttButton.setOnClickListener {
             findNavController().navigate(R.id.action_dashBoardFragment_to_homeFragment)
         }

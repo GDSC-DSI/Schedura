@@ -5,11 +5,6 @@
     <color name="material_green">#96FF8D</color>
     <color name="material_blue_light">#D7D5F6FF</color>
     <color name="gray">#717171</color>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="transparent">#717171</color>
@@ -17,7 +12,7 @@
     <color name="blueMain">#0668E1</color>
     <color name="lightBlue">#C3F1FF</color>
     <color name="lightMain">#61A3F3</color>
-    <color name="cardColor1">#C7A7F1</color>
+    <color name="cardColor1">#C498FF</color>
     <color name="cardColor2">#EAE1D2</color>
     <color name="cardColor3">#BECFFB</color>
     <color name="cardColor4">#CCFFCC</color>
@@ -37,4 +32,7 @@
     <color name="colorSuccess">#4caf50</color>
     <color name="colorError">#d32f2f</color>
     <color name="colorWarning">#ff9800</color>
+
+    <color name="trans">#00FFFFFF</color>
+    <color name="bottomNavC">#8DB4FF</color>
 </resources>

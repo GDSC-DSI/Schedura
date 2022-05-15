@@ -16,8 +16,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        window.setStatusBarColor(this.getResources().getColor(R.color.material_blue))
         val navHost = findViewById<View>(R.id.navHostFragmentHome)
         binding.bottomNav.setupWithNavController(navHost.findNavController())
-    //        val navHost = findViewById<View>(R.id.navHostFragmentHome)
     }
 }
